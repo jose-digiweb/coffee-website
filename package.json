@@ -7,7 +7,7 @@
     "dev": "parcel app/index.html",
     "build": "parcel build app/index.html"
   },
-  "author": "",
+  "author": "Jose Furtado",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",

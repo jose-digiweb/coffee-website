@@ -1,3 +1,5 @@
+@import './variables';
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -12,14 +14,14 @@ html {
 }
 
 body {
-  font-family: "Barlow", sans-serif;
-  font-size: 1rem;
+  font-family: $barlow;
+  font-size: $body;
   font-weight: 400;
   line-height: 26px;
 }
 
 h1 {
-  font-family: "Fraunces", serif;
+  font-family: $fraunces;
   font-weight: 900;
   font-size: 4.5rem;
   line-height: 72px;
@@ -28,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Fraunces", serif;
+  font-family: $fraunces;
   font-weight: 900;
   font-size: 2.5rem;
   line-height: 48px;
@@ -37,7 +39,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Fraunces", serif;
+  font-family: $fraunces;
   font-weight: 900;
   font-size: 2rem;
   line-height: 36px;
@@ -46,7 +48,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Fraunces", serif;
+  font-family: $fraunces;
   font-weight: 900;
   font-size: 1.5rem;
   line-height: 32px;
@@ -56,18 +58,17 @@ h4 {
 
 .btn__primary {
   border: none;
-  background-color: #0e8784;
+  background-color: $darkCyan;
   width: 217px;
   height: 56px;
-  font-family: "Fraunces", serif;
+  font-family: 'Fraunces', serif;
   font-weight: 900;
   font-size: 18px;
-  color: #fefcf7;
+  color: $lightCream;
   border-radius: 6px;
   transition: all 200ms ease-in-out;
-}
-.btn__primary:hover {
-  background-color: #66d2cf;
-}
 
-/*# sourceMappingURL=/main.07544d9b.css.map */
+  &:hover {
+    background-color: $btnHover;
+  }
+}

@@ -11,11 +11,18 @@ html {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: "Barlow", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 26px;
+  background-color: #fefcf7;
 }
 
 h1 {
@@ -54,6 +61,11 @@ h4 {
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .btn__primary {
   border: none;
   background-color: #0e8784;
@@ -68,6 +80,69 @@ h4 {
 }
 .btn__primary:hover {
   background-color: #66d2cf;
+}
+
+.main {
+  width: 100%;
+  padding: 0 80px;
+}
+
+.header {
+  width: 100%;
+  height: 113px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header span {
+  font-size: 1.5625rem;
+  font-family: "Fraunces", serif;
+  margin-left: 0.1em;
+}
+.header a {
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #83888f;
+  text-transform: uppercase;
+  transition: color 200ms ease-in-out;
+}
+.header a:not(:last-child) {
+  margin-right: 33px;
+}
+.header a:hover {
+  color: #333d4b;
+}
+
+.hero__sec {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.hero__sec .hero__bg {
+  width: 100%;
+}
+.hero__sec .hero__bg img {
+  width: 100%;
+  border-radius: 6px;
+}
+.hero__sec .hero__copy {
+  position: absolute;
+  padding-left: 85px;
+  top: 117px;
+}
+.hero__sec .hero__copy h1 {
+  font-size: 90px;
+  letter-spacing: -5px;
+  line-height: 90px;
+  color: #fefcf7;
+  margin-bottom: 32px;
+}
+.hero__sec .hero__copy p {
+  color: #fefcf7;
+  margin-bottom: 56px;
 }
 
 /*# sourceMappingURL=/main.07544d9b.css.map */

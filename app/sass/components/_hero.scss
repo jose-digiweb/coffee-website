@@ -1,0 +1,35 @@
+@import '../reudables/variables';
+
+.hero__sec {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .hero__bg {
+    width: 100%;
+
+    img {
+      width: 100%;
+      border-radius: 6px;
+    }
+  }
+
+  .hero__copy {
+    position: absolute;
+    padding-left: 85px;
+    top: 117px;
+
+    h1 {
+      font-size: 90px;
+      letter-spacing: -5px;
+      line-height: 90px;
+      color: $lightCream;
+      margin-bottom: 32px;
+    }
+
+    p {
+      color: $lightCream;
+      margin-bottom: 56px;
+    }
+  }
+}

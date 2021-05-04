@@ -13,11 +13,18 @@ html {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-family: $barlow;
   font-size: $body;
   font-weight: 400;
   line-height: 26px;
+  background-color: $lightCream;
 }
 
 h1 {
@@ -56,6 +63,11 @@ h4 {
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .btn__primary {
   border: none;
   background-color: $darkCyan;
@@ -71,4 +83,9 @@ h4 {
   &:hover {
     background-color: $btnHover;
   }
+}
+
+.main {
+  width: 100%;
+  padding: 0 80px;
 }

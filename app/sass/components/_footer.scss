@@ -1,0 +1,45 @@
+@import '../reusables/variables';
+@import '../reusables/global';
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $darkGray;
+  padding: 47px 85px;
+  margin-bottom: 88px;
+
+  .logo__nav {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 102px;
+    }
+
+    .nf a {
+      margin-top: 4px;
+
+      &:hover {
+        color: $lightCream;
+      }
+    }
+  }
+
+  .social_icons {
+    .icon {
+      font-size: 24px;
+      color: $lightCream;
+      transition: color 200ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      &:hover {
+        color: $paleOrange;
+      }
+    }
+  }
+}

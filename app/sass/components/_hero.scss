@@ -1,4 +1,4 @@
-@import '../reudables/variables';
+@import '../reusables/variables';
 
 .hero__sec {
   width: 100%;
@@ -7,6 +7,7 @@
 
   .hero__bg {
     width: 100%;
+    z-index: 0;
 
     img {
       width: 100%;
@@ -16,18 +17,17 @@
 
   .hero__copy {
     position: absolute;
-    padding-left: 85px;
     top: 117px;
+    margin-left: 85px;
 
     h1 {
-      font-size: 90px;
-      letter-spacing: -5px;
-      line-height: 90px;
+      font-size: 4.5rem;
       color: $lightCream;
       margin-bottom: 32px;
     }
 
     p {
+      line-height: 1.625rem;
       color: $lightCream;
       margin-bottom: 56px;
     }

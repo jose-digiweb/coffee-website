@@ -1,0 +1,79 @@
+@import '../reusables/global';
+@import '../reusables/variables';
+
+.how__sec {
+  width: 100%;
+  margin-left: 80px;
+  margin-bottom: 200px;
+
+  .how__title {
+    width: 100%;
+
+    h4 {
+      color: $gray;
+      margin-bottom: 80px;
+    }
+  }
+
+  .progress__bar {
+    width: 100%;
+    display: flex;
+    margin-bottom: 67px;
+
+    span {
+      position: relative;
+      width: 31px;
+      height: 31px;
+      border: $darkCyan 2px solid;
+      border-radius: 100%;
+
+      &:not(:last-child) {
+        margin-right: 350px;
+      }
+
+      &:not(:last-child)::before {
+        content: '';
+        position: absolute;
+        background-color: $paleOrange;
+        width: 349px;
+        height: 2px;
+        left: 29.9px;
+        top: 13.5px;
+      }
+    }
+  }
+
+  .how__cards {
+    width: 100%;
+    display: flex;
+    margin-bottom: 64px;
+
+    .how__card {
+      max-width: 285px;
+
+      &:not(:last-child) {
+        margin-right: 95px;
+      }
+
+      .numbers {
+        width: 100%;
+        margin-bottom: 38px;
+
+        .number {
+          font-family: $fraunces;
+          font-size: 72px;
+          line-height: 72px;
+          color: $paleOrange;
+        }
+      }
+    }
+
+    .card__copy {
+      width: 100%;
+
+      .card__title {
+        margin-bottom: 42px;
+      }
+    }
+  }
+}

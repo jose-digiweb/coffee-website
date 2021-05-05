@@ -1,4 +1,5 @@
-@import '../reudables/variables';
+@import '../reusables/variables';
+@import '../reusables/global';
 
 .header {
   width: 100%;
@@ -8,28 +9,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  span {
-    font-size: 1.5625rem;
-    font-family: $fraunces;
-    margin-left: 0.1em;
-  }
-
-  a {
-    font-family: $barlow;
-    font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 1;
-    color: $gray;
-    text-transform: uppercase;
-    transition: color 200ms ease-in-out;
-
-    &:not(:last-child) {
-      margin-right: 33px;
-    }
-
-    &:hover {
-      color: $darkGray;
-    }
-  }
 }

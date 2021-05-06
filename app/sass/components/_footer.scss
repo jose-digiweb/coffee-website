@@ -7,15 +7,19 @@
   align-items: center;
   justify-content: space-between;
   background-color: $darkGray;
-  padding: 47px 85px;
-  margin-bottom: 88px;
+  padding: 2.9375em 5.3125em;
+  margin-bottom: 5.5em;
+
+  @media screen and(max-width: 1270px) and (min-width: 1024px) {
+    padding: 2.9375em 2.5em;
+  }
 
   .logo__nav {
     display: flex;
     align-items: center;
 
     .logo {
-      margin-right: 102px;
+      margin-right: 4.08em;
     }
 
     .nf a {
@@ -34,7 +38,7 @@
       transition: color 200ms ease-in-out;
 
       &:not(:last-child) {
-        margin-right: 24px;
+        margin-right: 1.5em;
       }
 
       &:hover {

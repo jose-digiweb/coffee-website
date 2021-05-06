@@ -2,9 +2,14 @@
 @import '../reusables/variables';
 
 .how__sec {
-  width: 100%;
+  width: auto;
   margin-left: 80px;
   margin-bottom: 200px;
+
+  @media screen and(max-width: 1270px) and (min-width: 1024px) {
+    margin-left: 0px;
+    padding-left: 2.5em;
+  }
 
   .how__title {
     width: 100%;
@@ -15,64 +20,77 @@
     }
   }
 
-  .progress__bar {
-    width: 100%;
-    display: flex;
-    margin-bottom: 67px;
-
-    span {
-      position: relative;
-      width: 31px;
-      height: 31px;
-      border: $darkCyan 2px solid;
-      border-radius: 100%;
-
-      &:not(:last-child) {
-        margin-right: 350px;
-      }
-
-      &:not(:last-child)::before {
-        content: '';
-        position: absolute;
-        background-color: $paleOrange;
-        width: 349px;
-        height: 2px;
-        left: 29.9px;
-        top: 13.5px;
-      }
-    }
-  }
-
   .how__cards {
     width: 100%;
     display: flex;
-    margin-bottom: 64px;
+    margin-bottom: 4em;
 
     .how__card {
       max-width: 285px;
+      min-width: 200px;
+      position: relative;
 
       &:not(:last-child) {
-        margin-right: 95px;
+        margin-right: 5.9375em;
+      }
+
+      .progress__bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 67px;
+
+        // .line {
+        //   display: flex;
+        //   left: 31px;
+        //   width: 100%;
+        //   height: 2px;
+        //   background-color: $paleOrange;
+        // }
+
+        span {
+          font-size: 31px;
+          color: $darkCyan;
+          background-color: $lightCream;
+
+          &:not(:last-child) {
+            margin-right: 350px;
+          }
+
+          &:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            background-color: $paleOrange;
+            width: 349px;
+            height: 2px;
+            left: 29.9px;
+            top: 13.5px;
+
+            @media screen and(max-width: 1270px) and (min-width: 1024px) {
+              width: 340px;
+            }
+          }
+        }
       }
 
       .numbers {
         width: 100%;
-        margin-bottom: 38px;
+        margin-bottom: 2.375em;
 
         .number {
           font-family: $fraunces;
-          font-size: 72px;
-          line-height: 72px;
+          font-size: 4.5rem;
+          line-height: 4.5rem;
           color: $paleOrange;
         }
       }
-    }
 
-    .card__copy {
-      width: 100%;
+      .card__copy {
+        width: 100%;
 
-      .card__title {
-        margin-bottom: 42px;
+        .card__title {
+          margin-bottom: 1.3125em;
+        }
       }
     }
   }

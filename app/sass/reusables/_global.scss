@@ -25,7 +25,11 @@ body {
   font-weight: 400;
   line-height: 26px;
   background-color: $lightCream;
-  padding: 0 80px;
+  padding: 0 5em;
+
+  @media screen and(max-width: 1270px) and (min-width: 1024px) {
+    padding: 0 2.5em;
+  }
 }
 
 h1 {
@@ -70,14 +74,11 @@ p {
 }
 
 .btn__primary {
-  border: none;
   background-color: $darkCyan;
-  width: 217px;
-  height: 56px;
   font-family: 'Fraunces', serif;
-  font-weight: 900;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: $lightCream;
+  padding: 0.9375em 1.9375em 1em 1.9375em;
   border-radius: 6px;
   transition: all 200ms ease-in-out;
 
@@ -124,4 +125,7 @@ p {
 
 .main {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

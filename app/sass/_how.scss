@@ -1,5 +1,5 @@
-@import '../reusables/global';
-@import '../reusables/variables';
+@import './global';
+@import './variables';
 
 .how__sec {
   width: auto;
@@ -9,6 +9,10 @@
   @media screen and(max-width: 1270px) and (min-width: 1024px) {
     margin-left: 0px;
     padding-left: 2.5em;
+  }
+
+  @media screen and(max-width: 1023px) and (min-width: 768px) {
+    margin: 100px 0 140px 0;
   }
 
   .how__title {
@@ -34,19 +38,19 @@
         margin-right: 5.9375em;
       }
 
+      @media screen and(max-width: 1023px) and (min-width: 768px) {
+        max-width: 223px;
+
+        &:not(:last-child) {
+          margin-right: 2em;
+        }
+      }
+
       .progress__bar {
         width: 100%;
         display: flex;
         align-items: center;
         margin-bottom: 67px;
-
-        // .line {
-        //   display: flex;
-        //   left: 31px;
-        //   width: 100%;
-        //   height: 2px;
-        //   background-color: $paleOrange;
-        // }
 
         span {
           font-size: 31px;
@@ -69,6 +73,10 @@
             @media screen and(max-width: 1270px) and (min-width: 1024px) {
               width: 340px;
             }
+
+            @media screen and(max-width: 1023px) and (min-width: 768px) {
+              width: 230px;
+            }
           }
         }
       }
@@ -90,6 +98,12 @@
 
         .card__title {
           margin-bottom: 1.3125em;
+        }
+
+        p {
+          @media screen and(max-width: 1023px) and (min-width: 768px) {
+            padding-right: 0;
+          }
         }
       }
     }

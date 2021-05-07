@@ -1,5 +1,5 @@
-@import '../reusables/variables';
-@import '../reusables/global';
+@import './variables';
+@import './global';
 
 .why__sec {
   max-width: 1280px;
@@ -15,12 +15,20 @@
     padding: 6.25em 2.5em 0em 2.5em;
   }
 
+  @media screen and(max-width: 1023px) and (min-width: 768px) {
+    padding: 56px 57px 0 57px;
+  }
+
   .why__copy {
     text-align: center;
     padding: 0 8em;
 
     @media screen and(max-width: 1270px) and (min-width: 1024px) {
       padding: 0 8em;
+    }
+
+    @media screen and(max-width: 1023px) and (min-width: 768px) {
+      padding: 0 1.2em;
     }
 
     h2 {
@@ -31,6 +39,10 @@
     p {
       color: $lightCream;
       margin-bottom: 5.3125em;
+
+      @media screen and(max-width: 1023px) and (min-width: 768px) {
+        margin-bottom: 70px;
+      }
     }
   }
 
@@ -38,6 +50,11 @@
     width: 100%;
     display: flex;
     margin-bottom: -9.375em;
+
+    @media screen and(max-width: 1023px) and (min-width: 768px) {
+      flex-direction: column;
+      margin-bottom: -320px;
+    }
 
     .why__card {
       width: 100%;
@@ -51,6 +68,13 @@
         padding: 4em 2em 3em 2em;
       }
 
+      @media screen and(max-width: 1023px) and (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        padding: 41px 48px 41px 70px;
+        margin: 0 0 24px 0;
+      }
+
       &:not(:last-child) {
         margin-right: 1em;
       }
@@ -60,6 +84,10 @@
         margin-bottom: 3.5em;
         text-align: center;
 
+        @media screen and(max-width: 1023px) and (min-width: 768px) {
+          margin: 0;
+        }
+
         img {
           width: 72px;
         }
@@ -68,6 +96,11 @@
       .card__copy {
         width: 100%;
         text-align: center;
+
+        @media screen and(max-width: 1023px) and (min-width: 768px) {
+          text-align: start;
+          margin-left: 55px;
+        }
 
         h4 {
           color: $lightCream;

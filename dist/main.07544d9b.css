@@ -37,6 +37,11 @@ body {
     padding: 0 2.5em;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  body {
+    padding: 0 2.5em;
+  }
+}
 
 h1 {
   font-family: "Fraunces", serif;
@@ -168,6 +173,11 @@ body {
   scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
+  body {
+    padding: 0 2.5em;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   body {
     padding: 0 2.5em;
   }
@@ -281,6 +291,11 @@ p {
     padding: 2.5em;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .header {
+    padding: 0;
+  }
+}
 
 .hero__sec {
   width: 100%;
@@ -293,50 +308,63 @@ p {
     margin-bottom: 8em;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .hero__sec {
+    margin-bottom: 144px;
+  }
+}
 .hero__sec .hero__bg {
   width: 100%;
-  z-index: 0;
+  background-image: url(/image-hero-coffeepress.145df461.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 7.5em 5.3em;
+  border-radius: 8px;
 }
-.hero__sec .hero__bg img {
-  width: 100%;
-  border-radius: 6px;
+@media screen and (max-width: 1270px) and (min-width: 1024px) {
+  .hero__sec .hero__bg {
+    padding: 7.5em 3em;
+  }
 }
-.hero__sec .hero__copy {
-  position: absolute;
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .hero__sec .hero__bg {
+    background-image: url(/image-hero-coffeepress.3c069112.jpg);
+    padding: 6.6em 3.6em;
+  }
+}
+.hero__sec .hero__bg .hero__copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  padding-left: 5.3em;
 }
-@media screen and (max-width: 1270px) and (min-width: 1024px) {
-  .hero__sec .hero__copy {
-    padding: 3em;
-  }
-}
-.hero__sec .hero__copy h1 {
+.hero__sec .hero__bg .hero__copy h1 {
   font-size: 4.5rem;
   color: #fefcf7;
   margin-bottom: 0.5em;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
-  .hero__sec .hero__copy h1 {
+  .hero__sec .hero__bg .hero__copy h1 {
     font-size: 3.8rem;
     line-height: 1.2em;
     margin-bottom: 0.4em;
   }
 }
-.hero__sec .hero__copy p {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .hero__sec .hero__bg .hero__copy h1 {
+    font-size: 3rem;
+    line-height: 48px;
+  }
+}
+.hero__sec .hero__bg .hero__copy p {
   line-height: 1.625rem;
   color: #fefcf7;
   margin-bottom: 3.5em;
 }
-.hero__sec .hero__copy .hero__button {
+.hero__sec .hero__bg .hero__copy .hero__button {
   width: 100%;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 html {
@@ -374,6 +402,11 @@ body {
   scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
+  body {
+    padding: 0 2.5em;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   body {
     padding: 0 2.5em;
   }
@@ -486,6 +519,12 @@ p {
     padding: 0 2em;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec {
+    padding: 0;
+    margin-bottom: 144px;
+  }
+}
 .collection__sec .collection__title {
   width: 100%;
   display: flex;
@@ -494,6 +533,11 @@ p {
   padding: 2.5em 0;
   position: relative;
   margin-bottom: -2.8em;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec .collection__title {
+    margin-bottom: -3.1em;
+  }
 }
 .collection__sec .collection__title::after {
   content: "";
@@ -519,6 +563,11 @@ p {
     font-size: 7rem;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec .collection__title h2 {
+    font-size: 6rem;
+  }
+}
 .collection__sec .collection__cards {
   width: 100%;
   display: flex;
@@ -526,8 +575,24 @@ p {
   padding-left: 1em;
   z-index: 1;
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec .collection__cards {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec .collection__cards {
+    padding: 0 57px;
+  }
+}
 .collection__sec .collection__cards .collection__card {
   width: 100%;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec .collection__cards .collection__card {
+    display: flex;
+    margin-bottom: 32px;
+  }
 }
 .collection__sec .collection__cards .collection__card .card__image {
   width: 100%;
@@ -547,12 +612,23 @@ p {
   text-align: center;
   margin-top: 4.4375em;
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec .collection__cards .collection__card .card__copy {
+    text-align: start;
+    margin: 0.8em 0 0 0;
+  }
+}
 .collection__sec .collection__cards .collection__card .card__copy h3 {
   font-size: 1.5rem;
   margin-bottom: 1em;
 }
 .collection__sec .collection__cards .collection__card .card__copy p {
   padding: 0 1.5em;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .collection__sec .collection__cards .collection__card .card__copy p {
+    padding: 0;
+  }
 }
 
 html {
@@ -590,6 +666,11 @@ body {
   scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
+  body {
+    padding: 0 2.5em;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   body {
     padding: 0 2.5em;
   }
@@ -705,6 +786,11 @@ p {
     padding: 6.25em 2.5em 0em 2.5em;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .why__sec {
+    padding: 56px 57px 0 57px;
+  }
+}
 .why__sec .why__copy {
   text-align: center;
   padding: 0 8em;
@@ -712,6 +798,11 @@ p {
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   .why__sec .why__copy {
     padding: 0 8em;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .why__sec .why__copy {
+    padding: 0 1.2em;
   }
 }
 .why__sec .why__copy h2 {
@@ -722,10 +813,21 @@ p {
   color: #fefcf7;
   margin-bottom: 5.3125em;
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .why__sec .why__copy p {
+    margin-bottom: 70px;
+  }
+}
 .why__sec .why__cards {
   width: 100%;
   display: flex;
   margin-bottom: -9.375em;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .why__sec .why__cards {
+    flex-direction: column;
+    margin-bottom: -320px;
+  }
 }
 .why__sec .why__cards .why__card {
   width: 100%;
@@ -740,6 +842,14 @@ p {
     padding: 4em 2em 3em 2em;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .why__sec .why__cards .why__card {
+    flex-direction: row;
+    align-items: center;
+    padding: 41px 48px 41px 70px;
+    margin: 0 0 24px 0;
+  }
+}
 .why__sec .why__cards .why__card:not(:last-child) {
   margin-right: 1em;
 }
@@ -748,12 +858,23 @@ p {
   margin-bottom: 3.5em;
   text-align: center;
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .why__sec .why__cards .why__card .card__image {
+    margin: 0;
+  }
+}
 .why__sec .why__cards .why__card .card__image img {
   width: 72px;
 }
 .why__sec .why__cards .why__card .card__copy {
   width: 100%;
   text-align: center;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .why__sec .why__cards .why__card .card__copy {
+    text-align: start;
+    margin-left: 55px;
+  }
 }
 .why__sec .why__cards .why__card .card__copy h4 {
   color: #fefcf7;
@@ -798,6 +919,11 @@ body {
   scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
+  body {
+    padding: 0 2.5em;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   body {
     padding: 0 2.5em;
   }
@@ -909,6 +1035,11 @@ p {
     padding-left: 2.5em;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .how__sec {
+    margin: 100px 0 140px 0;
+  }
+}
 .how__sec .how__title {
   width: 100%;
 }
@@ -928,6 +1059,14 @@ p {
 }
 .how__sec .how__cards .how__card:not(:last-child) {
   margin-right: 5.9375em;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .how__sec .how__cards .how__card {
+    max-width: 223px;
+  }
+  .how__sec .how__cards .how__card:not(:last-child) {
+    margin-right: 2em;
+  }
 }
 .how__sec .how__cards .how__card .progress__bar {
   width: 100%;
@@ -957,6 +1096,11 @@ p {
     width: 340px;
   }
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .how__sec .how__cards .how__card .progress__bar span:not(:last-child)::before {
+    width: 230px;
+  }
+}
 .how__sec .how__cards .how__card .numbers {
   width: 100%;
   margin-bottom: 2.375em;
@@ -972,6 +1116,11 @@ p {
 }
 .how__sec .how__cards .how__card .card__copy .card__title {
   margin-bottom: 1.3125em;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .how__sec .how__cards .how__card .card__copy p {
+    padding-right: 0;
+  }
 }
 
 html {
@@ -1009,6 +1158,11 @@ body {
   scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
+  body {
+    padding: 0 2.5em;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
   body {
     padding: 0 2.5em;
   }
@@ -1118,6 +1272,12 @@ p {
   padding: 2.9375em 5.3125em;
   margin-bottom: 5.5em;
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 54px 190px 54px 215px;
+  }
+}
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   .footer {
     padding: 2.9375em 2.5em;
@@ -1127,14 +1287,29 @@ p {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .footer .logo__nav {
+    flex-direction: column;
+  }
+}
 .footer .logo__nav .logo {
   margin-right: 4.08em;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .footer .logo__nav .logo {
+    margin: 0 0 32px 0;
+  }
 }
 .footer .logo__nav .nf a {
   margin-top: 4px;
 }
 .footer .logo__nav .nf a:hover {
   color: #fefcf7;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .footer .social_icons {
+    margin-top: 65px;
+  }
 }
 .footer .social_icons .icon {
   font-size: 24px;

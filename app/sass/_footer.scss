@@ -1,5 +1,5 @@
-@import '../reusables/variables';
-@import '../reusables/global';
+@import './variables';
+@import './global';
 
 .footer {
   width: 100%;
@@ -10,6 +10,11 @@
   padding: 2.9375em 5.3125em;
   margin-bottom: 5.5em;
 
+  @media screen and(max-width: 1023px) and (min-width: 768px) {
+    flex-direction: column;
+    padding: 54px 190px 54px 215px;
+  }
+
   @media screen and(max-width: 1270px) and (min-width: 1024px) {
     padding: 2.9375em 2.5em;
   }
@@ -18,8 +23,16 @@
     display: flex;
     align-items: center;
 
+    @media screen and(max-width: 1023px) and (min-width: 768px) {
+      flex-direction: column;
+    }
+
     .logo {
       margin-right: 4.08em;
+
+      @media screen and(max-width: 1023px) and (min-width: 768px) {
+        margin: 0 0 32px 0;
+      }
     }
 
     .nf a {
@@ -32,6 +45,10 @@
   }
 
   .social_icons {
+    @media screen and(max-width: 1023px) and (min-width: 768px) {
+      margin-top: 65px;
+    }
+
     .icon {
       font-size: 24px;
       color: $lightCream;

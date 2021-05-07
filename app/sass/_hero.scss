@@ -1,0 +1,71 @@
+@import './variables';
+
+.hero__sec {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 12.5em;
+
+  @media screen and(max-width: 1270px) and (min-width: 1024px) {
+    margin-bottom: 8em;
+  }
+
+  @media screen and(max-width: 1023px) and (min-width: 768px) {
+    margin-bottom: 144px;
+  }
+
+  .hero__bg {
+    width: 100%;
+    background-image: url(../assets/home/desktop/image-hero-coffeepress.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 7.5em 5.3em;
+    border-radius: 8px;
+
+    @media screen and(max-width: 1270px) and (min-width: 1024px) {
+      padding: 7.5em 3em;
+    }
+
+    @media screen and(max-width: 1023px) and (min-width: 768px) {
+      background-image: url(../assets/home/tablet/image-hero-coffeepress.jpg);
+
+      padding: 6.6em 3.6em;
+    }
+
+    .hero__copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 4.5rem;
+        color: $lightCream;
+        margin-bottom: 0.5em;
+
+        @media screen and(max-width: 1270px) and (min-width: 1024px) {
+          font-size: 3.8rem;
+          line-height: 1.2em;
+          margin-bottom: 0.4em;
+        }
+
+        @media screen and(max-width: 1023px) and (min-width: 768px) {
+          font-size: 3rem;
+          line-height: 48px;
+        }
+      }
+
+      p {
+        line-height: 1.625rem;
+        color: $lightCream;
+        margin-bottom: 3.5em;
+      }
+
+      .hero__button {
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

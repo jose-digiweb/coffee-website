@@ -1,5 +1,5 @@
-@import '../reusables/variables';
-@import '../reusables/global';
+@import './variables';
+@import './global';
 
 .header {
   width: 100%;
@@ -11,5 +11,9 @@
 
   @media screen and(max-width: 1270px) and (min-width: 1024px) {
     padding: 2.5em;
+  }
+
+  @media screen and(max-width: 1023px) and (min-width: 768px) {
+    padding: 0;
   }
 }

@@ -10,7 +10,7 @@
     margin-bottom: 8em;
   }
 
-  @media screen and(max-width: 1023px) and (min-width: 768px) {
+  @media screen and(max-width: 1023px) {
     margin-bottom: 144px;
   }
 
@@ -27,11 +27,17 @@
       padding: 7.5em 3em;
     }
 
-    @media screen and(max-width: 1023px) and (min-width: 768px) {
+    @media screen and(max-width: 1023px) {
       background-image: url(../assets/home/tablet/image-hero-coffeepress.jpg);
 
       padding: 6.6em 3.6em;
     }
+
+    // @media screen and(max-width: 767px) {
+    //   background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+
+    //   background-size: cover;
+    // }
 
     .hero__copy {
       display: flex;
@@ -49,7 +55,7 @@
           margin-bottom: 0.4em;
         }
 
-        @media screen and(max-width: 1023px) and (min-width: 768px) {
+        @media screen and(max-width: 1023px) {
           font-size: 3rem;
           line-height: 48px;
         }

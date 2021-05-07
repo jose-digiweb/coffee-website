@@ -11,12 +11,19 @@
     padding-left: 2.5em;
   }
 
-  @media screen and(max-width: 1023px) and (min-width: 768px) {
+  @media screen and(max-width: 1023px) {
     margin: 100px 0 140px 0;
   }
 
   .how__title {
     width: 100%;
+
+    @media screen and(max-width: 767px) {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     h4 {
       color: $gray;
@@ -29,6 +36,10 @@
     display: flex;
     margin-bottom: 4em;
 
+    @media screen and(max-width: 767px) {
+      flex-direction: column;
+    }
+
     .how__card {
       max-width: 285px;
       min-width: 200px;
@@ -38,11 +49,21 @@
         margin-right: 5.9375em;
       }
 
-      @media screen and(max-width: 1023px) and (min-width: 768px) {
+      @media screen and(max-width: 1023px) {
         max-width: 223px;
 
         &:not(:last-child) {
           margin-right: 2em;
+        }
+      }
+
+      @media screen and(max-width: 767px) {
+        text-align: center;
+        max-width: none;
+        min-width: none;
+
+        &:not(:last-child) {
+          margin: 0 0 56px 0;
         }
       }
 
@@ -51,6 +72,10 @@
         display: flex;
         align-items: center;
         margin-bottom: 67px;
+
+        @media screen and(max-width: 767px) {
+          display: none;
+        }
 
         span {
           font-size: 31px;
@@ -74,7 +99,7 @@
               width: 340px;
             }
 
-            @media screen and(max-width: 1023px) and (min-width: 768px) {
+            @media screen and(max-width: 1023px) {
               width: 230px;
             }
           }
@@ -101,11 +126,18 @@
         }
 
         p {
-          @media screen and(max-width: 1023px) and (min-width: 768px) {
+          @media screen and(max-width: 1023px) {
             padding-right: 0;
           }
         }
       }
+    }
+  }
+
+  .how__btn {
+    @media screen and(max-width: 767px) {
+      display: flex;
+      justify-content: center;
     }
   }
 }

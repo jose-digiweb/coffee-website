@@ -10,7 +10,7 @@
   padding: 2.9375em 5.3125em;
   margin-bottom: 5.5em;
 
-  @media screen and(max-width: 1023px) and (min-width: 768px) {
+  @media screen and(max-width: 1023px) {
     flex-direction: column;
     padding: 54px 190px 54px 215px;
   }
@@ -23,29 +23,43 @@
     display: flex;
     align-items: center;
 
-    @media screen and(max-width: 1023px) and (min-width: 768px) {
+    @media screen and(max-width: 1023px) {
       flex-direction: column;
     }
 
     .logo {
       margin-right: 4.08em;
 
-      @media screen and(max-width: 1023px) and (min-width: 768px) {
+      @media screen and(max-width: 1023px) {
         margin: 0 0 32px 0;
       }
     }
 
-    .nf a {
-      margin-top: 4px;
+    .nav__footer {
+      display: flex;
 
-      &:hover {
-        color: $lightCream;
+      a {
+        font-family: $barlow;
+        font-weight: 700;
+        font-size: 0.75rem;
+        line-height: 1;
+        color: $gray;
+        text-transform: uppercase;
+        transition: color 200ms ease-in-out;
+
+        &:not(:last-child) {
+          margin-right: 33px;
+        }
+
+        &:hover {
+          color: $darkGray;
+        }
       }
     }
   }
 
   .social_icons {
-    @media screen and(max-width: 1023px) and (min-width: 768px) {
+    @media screen and(max-width: 1023px) {
       margin-top: 65px;
     }
 

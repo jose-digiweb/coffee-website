@@ -36,23 +36,25 @@
         <span class="logo__text">coffeeroasters</span>
       </div>
 
-      <div class="nav__menu">
+      <div class="nav__top">
         <a href="/">Home</a>
         <a href="./about.html">About us</a>
         <a href="./plan.html">Create your plan</a>
       </div>
+
+      <div class="mobile__menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="mobile__close">
+        <i class="fas fa-times"></i>
+      </div>
     </header>
 
     <main class="main">
+      <div class="overlay__menu"></div>
       <section class="hero__sec">
         <div class="hero__bg">
-          <!-- <img
-            id="heroImage"
-            src="./assets/home/desktop/image-hero-coffeepress.jpg"
-            alt="coffee"
-          />
-          -->
-
           <div class="hero__copy">
             <h1 class="hero__title">
               Great coffee <br />
@@ -217,10 +219,7 @@
             </div>
 
             <div class="card__copy">
-              <h3 class="card__title">
-                Pick your <br />
-                coffee
-              </h3>
+              <h3 class="card__title">Pick your coffee</h3>
               <p class="card__text">
                 Select from our evolving range of artisan coffees. Our beans are
                 ethically sourced and we pay fair prices for them. There are new
@@ -269,7 +268,9 @@
           </div>
         </div>
 
-        <a href="./plan.html" class="btn__primary">Create your plan</a>
+        <div class="how__btn">
+          <a href="./plan.html" class="btn__primary">Create your plan</a>
+        </div>
       </section>
     </main>
 
@@ -281,7 +282,7 @@
           <span class="logo__text lf">coffeeroasters</span>
         </div>
 
-        <div class="nav__menu nf">
+        <div class="nav__footer">
           <a href="#">Home</a>
           <a href="#">About</a>
           <a href="#">Create your plan</a>

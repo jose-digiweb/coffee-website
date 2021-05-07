@@ -15,6 +15,12 @@ a {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  user-select: none;
+}
+
+img {
+  width: 100%;
+  user-select: none;
 }
 
 body {
@@ -24,6 +30,7 @@ body {
   line-height: 26px;
   background-color: #fefcf7;
   padding: 0 5em;
+  scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   body {
@@ -79,6 +86,7 @@ p {
   color: #fefcf7;
   padding: 0.9375em 1.9375em 1em 1.9375em;
   border-radius: 6px;
+  user-select: none;
   transition: all 200ms ease-in-out;
 }
 .btn__primary:hover {
@@ -88,6 +96,7 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 .logo .logo__text {
   font-size: 1.5625rem;
@@ -141,6 +150,12 @@ a {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  user-select: none;
+}
+
+img {
+  width: 100%;
+  user-select: none;
 }
 
 body {
@@ -150,6 +165,7 @@ body {
   line-height: 26px;
   background-color: #fefcf7;
   padding: 0 5em;
+  scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   body {
@@ -205,6 +221,7 @@ p {
   color: #fefcf7;
   padding: 0.9375em 1.9375em 1em 1.9375em;
   border-radius: 6px;
+  user-select: none;
   transition: all 200ms ease-in-out;
 }
 .btn__primary:hover {
@@ -214,6 +231,7 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 .logo .logo__text {
   font-size: 1.5625rem;
@@ -338,6 +356,12 @@ a {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  user-select: none;
+}
+
+img {
+  width: 100%;
+  user-select: none;
 }
 
 body {
@@ -347,6 +371,7 @@ body {
   line-height: 26px;
   background-color: #fefcf7;
   padding: 0 5em;
+  scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   body {
@@ -402,6 +427,7 @@ p {
   color: #fefcf7;
   padding: 0.9375em 1.9375em 1em 1.9375em;
   border-radius: 6px;
+  user-select: none;
   transition: all 200ms ease-in-out;
 }
 .btn__primary:hover {
@@ -411,6 +437,7 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 .logo .logo__text {
   font-size: 1.5625rem;
@@ -545,6 +572,12 @@ a {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  user-select: none;
+}
+
+img {
+  width: 100%;
+  user-select: none;
 }
 
 body {
@@ -554,6 +587,7 @@ body {
   line-height: 26px;
   background-color: #fefcf7;
   padding: 0 5em;
+  scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   body {
@@ -609,6 +643,7 @@ p {
   color: #fefcf7;
   padding: 0.9375em 1.9375em 1em 1.9375em;
   border-radius: 6px;
+  user-select: none;
   transition: all 200ms ease-in-out;
 }
 .btn__primary:hover {
@@ -618,6 +653,7 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 .logo .logo__text {
   font-size: 1.5625rem;
@@ -744,6 +780,12 @@ a {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  user-select: none;
+}
+
+img {
+  width: 100%;
+  user-select: none;
 }
 
 body {
@@ -753,6 +795,7 @@ body {
   line-height: 26px;
   background-color: #fefcf7;
   padding: 0 5em;
+  scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   body {
@@ -808,6 +851,7 @@ p {
   color: #fefcf7;
   padding: 0.9375em 1.9375em 1em 1.9375em;
   border-radius: 6px;
+  user-select: none;
   transition: all 200ms ease-in-out;
 }
 .btn__primary:hover {
@@ -817,6 +861,7 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 .logo .logo__text {
   font-size: 1.5625rem;
@@ -946,6 +991,12 @@ a {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  user-select: none;
+}
+
+img {
+  width: 100%;
+  user-select: none;
 }
 
 body {
@@ -955,6 +1006,7 @@ body {
   line-height: 26px;
   background-color: #fefcf7;
   padding: 0 5em;
+  scroll-behavior: smooth;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   body {
@@ -1010,6 +1062,7 @@ p {
   color: #fefcf7;
   padding: 0.9375em 1.9375em 1em 1.9375em;
   border-radius: 6px;
+  user-select: none;
   transition: all 200ms ease-in-out;
 }
 .btn__primary:hover {
@@ -1019,6 +1072,7 @@ p {
 .logo {
   display: flex;
   align-items: center;
+  user-select: none;
 }
 .logo .logo__text {
   font-size: 1.5625rem;

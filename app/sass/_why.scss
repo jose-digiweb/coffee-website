@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: $darkGray;
   padding: 6.25em 5.3125em 0em 5.3125em;
   border-radius: 8px;
@@ -19,21 +20,38 @@
     padding: 56px 57px 0 57px;
   }
 
+  @media screen and(max-width: 700px) {
+    margin-bottom: 320px;
+  }
+
+  @media screen and(max-width: 590px) {
+    padding: 74px 24px 0 24px;
+    margin-bottom: 590px;
+  }
+
   .why__copy {
     text-align: center;
-    padding: 0 8em;
-
-    @media screen and(max-width: 1270px) and (min-width: 1024px) {
-      padding: 0 8em;
-    }
+    max-width: 540px;
 
     @media screen and(max-width: 1023px) {
       padding: 0 1.2em;
     }
 
+    @media screen and(max-width: 590px) {
+      padding: 0;
+    }
+
     h2 {
       color: $lightCream;
       margin-bottom: 0.8em;
+
+      @media screen and(max-width: 590px) {
+        font-size: 28px;
+      }
+
+      @media screen and(max-width: 370px) {
+        font-size: 25px;
+      }
     }
 
     p {
@@ -56,6 +74,18 @@
       margin-bottom: -320px;
     }
 
+    @media screen and(max-width: 768px) {
+      margin-bottom: -360px;
+    }
+
+    @media screen and(max-width: 700px) {
+      margin-bottom: -350px;
+    }
+
+    @media screen and(max-width: 590px) {
+      margin-bottom: -600px;
+    }
+
     .why__card {
       width: 100%;
       display: flex;
@@ -75,6 +105,11 @@
         margin: 0 0 24px 0;
       }
 
+      @media screen and(max-width: 590px) {
+        flex-direction: column;
+        padding: 72px 33px 51px 33px;
+      }
+
       &:not(:last-child) {
         margin-right: 1em;
       }
@@ -86,6 +121,10 @@
 
         @media screen and(max-width: 1023px) {
           margin: 0;
+        }
+
+        @media screen and(max-width: 590px) {
+          margin-bottom: 56px;
         }
 
         img {
@@ -100,6 +139,11 @@
         @media screen and(max-width: 1023px) {
           text-align: start;
           margin-left: 55px;
+        }
+
+        @media screen and(max-width: 590px) {
+          text-align: center;
+          margin: 0;
         }
 
         h4 {

@@ -10,6 +10,10 @@
   align-items: center;
   z-index: 10;
 
+  @media screen and(max-width: 390px) {
+    height: 90px;
+  }
+
   .mobile__menu {
     display: none;
 
@@ -50,6 +54,10 @@
       left: 0;
       z-index: 2;
       transition: all 400ms ease-in-out;
+    }
+
+    @media screen and(max-width: 390px) {
+      top: 90px;
     }
 
     a {

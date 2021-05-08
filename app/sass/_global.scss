@@ -41,6 +41,10 @@ body {
   @media screen and(max-width: 1023px) and (min-width: 768px) {
     padding: 0 2.5em;
   }
+
+  @media screen and(max-width: 700px) {
+    padding: 0 24px;
+  }
 }
 
 h1 {
@@ -104,10 +108,20 @@ p {
   align-items: center;
   user-select: none;
 
+  img {
+    @media screen and(max-width: 390px) {
+      width: 16px;
+    }
+  }
+
   .logo__text {
     font-size: 1.5625rem;
     font-family: $fraunces;
     margin-left: 0.2em;
+
+    @media screen and(max-width: 390px) {
+      font-size: 1.2rem;
+    }
   }
 
   .lf {
@@ -137,5 +151,9 @@ p {
     visibility: hidden;
     z-index: 1;
     transition: all 500ms ease-in-out;
+  }
+
+  @media screen and(max-width: 390px) {
+    top: 90px;
   }
 }

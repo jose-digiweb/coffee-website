@@ -123,6 +123,12 @@
 
         .card__title {
           margin-bottom: 1.3125em;
+
+          @media screen and(max-width: 700px) {
+            margin-bottom: 24px;
+            font-size: 28px;
+            line-height: 32px;
+          }
         }
 
         p {

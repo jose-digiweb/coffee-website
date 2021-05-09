@@ -79,7 +79,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 168px;
+  margin-bottom: 256px; //168px + 88px from the quality image(-88px)
 
   @media screen and(max-width: 935px) {
     margin-bottom: 144px;
@@ -154,6 +154,48 @@
           font-size: 15px;
           line-height: 25px;
         }
+      }
+    }
+  }
+}
+
+.quality {
+  width: 100%;
+  display: flex;
+  background-color: $darkGray;
+  justify-content: center;
+  padding: 0 85px 88px 85px;
+  margin-bottom: 168px;
+  border-radius: 8px;
+
+  .quality__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -88px;
+
+    .quality__copy {
+      max-width: 540px;
+      margin-right: 125px;
+
+      h2 {
+        font-size: 40px;
+        line-height: 48px;
+        color: $lightCream;
+        margin-bottom: 32px;
+      }
+
+      p {
+        color: $lightCream;
+        opacity: 0.8;
+      }
+    }
+
+    .quality__image {
+      max-width: 445px;
+
+      img {
+        border-radius: 8px;
       }
     }
   }

@@ -500,7 +500,7 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 168px;
+  margin-bottom: 256px;
 }
 @media screen and (max-width: 935px) {
   .about__commitment {
@@ -582,6 +582,42 @@ p {
     font-size: 15px;
     line-height: 25px;
   }
+}
+
+.quality {
+  width: 100%;
+  display: flex;
+  background-color: #333d4b;
+  justify-content: center;
+  padding: 0 85px 88px 85px;
+  margin-bottom: 168px;
+  border-radius: 8px;
+}
+.quality .quality__wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: -88px;
+}
+.quality .quality__wrapper .quality__copy {
+  max-width: 540px;
+  margin-right: 125px;
+}
+.quality .quality__wrapper .quality__copy h2 {
+  font-size: 40px;
+  line-height: 48px;
+  color: #fefcf7;
+  margin-bottom: 32px;
+}
+.quality .quality__wrapper .quality__copy p {
+  color: #fefcf7;
+  opacity: 0.8;
+}
+.quality .quality__wrapper .quality__image {
+  max-width: 445px;
+}
+.quality .quality__wrapper .quality__image img {
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=/about-main.a3a79d6f.css.map */

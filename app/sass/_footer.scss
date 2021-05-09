@@ -7,12 +7,12 @@
   align-items: center;
   justify-content: space-between;
   background-color: $darkGray;
-  padding: 2.9375em 5.3125em;
-  margin-bottom: 5.5em;
+  padding: 2.9375em 5.3125em; //47px 85px
+  margin-bottom: 5.5em; //88px
 
   @media screen and(max-width: 1023px) {
     flex-direction: column;
-    padding: 54px 190px 54px 215px;
+    padding: 3.4em 11.9em 3.4em 13.5em; //54px 190px 54px 215px
   }
 
   @media screen and(max-width: 1270px) and (min-width: 1024px) {
@@ -35,7 +35,7 @@
       margin-right: 4.08em;
 
       @media screen and(max-width: 1023px) {
-        margin: 0 0 32px 0;
+        margin: 0 0 2em 0;
       }
     }
 
@@ -57,7 +57,7 @@
         transition: color 200ms ease-in-out;
 
         &:not(:last-child) {
-          margin-right: 33px;
+          margin-right: 2.75em; //33px
         }
 
         &:hover {
@@ -67,7 +67,7 @@
         @media screen and(max-width: 390px) {
           &:not(:last-child) {
             margin-right: 0;
-            margin-bottom: 24px;
+            margin-bottom: 2em; //24px
           }
         }
       }
@@ -76,11 +76,11 @@
 
   .social_icons {
     @media screen and(max-width: 1023px) {
-      margin-top: 65px;
+      margin-top: 4.1em; //65px
     }
 
     .icon {
-      font-size: 24px;
+      font-size: 1.5rem; //24px
       color: $lightCream;
       transition: color 200ms ease-in-out;
 

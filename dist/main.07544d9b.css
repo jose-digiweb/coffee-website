@@ -44,7 +44,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   body {
-    padding: 0 24px;
+    padding: 0 1.5em;
   }
 }
 
@@ -199,7 +199,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   body {
-    padding: 0 24px;
+    padding: 0 1.5em;
   }
 }
 
@@ -328,12 +328,12 @@ p {
 @media screen and (max-width: 700px) {
   .header .mobile__menu {
     display: block;
-    font-size: 20px;
+    font-size: 1.25rem;
     cursor: pointer;
   }
 }
 .header .mobile__close {
-  font-size: 20px;
+  font-size: 1.5rem;
   cursor: pointer;
   display: none;
 }
@@ -363,7 +363,7 @@ p {
     top: 113px;
     left: 0;
     z-index: 2;
-    transition: all 400ms ease-in-out;
+    transition: height 400ms ease-in-out;
   }
 }
 @media screen and (max-width: 390px) {
@@ -394,7 +394,8 @@ p {
     text-transform: capitalize;
     color: #333d4b;
     visibility: hidden;
-    transition: all 300ms ease-in-out;
+    transition-property: visibility, font-size;
+    transition: 300ms ease-in-out;
   }
   .header .nav__top a:not(:last-child) {
     margin-right: 0;
@@ -415,12 +416,12 @@ p {
 }
 @media screen and (max-width: 1023px) {
   .hero__sec {
-    margin-bottom: 144px;
+    margin-bottom: 9em;
   }
 }
 @media screen and (max-width: 700px) {
   .hero__sec {
-    margin-bottom: 80px;
+    margin-bottom: 5em;
   }
 }
 .hero__sec .hero__bg {
@@ -447,7 +448,7 @@ p {
   .hero__sec .hero__bg {
     background-image: url("/image-hero-coffeepress.19993349.jpg");
     background-position: bottom center;
-    padding: 100px 24px;
+    padding: 6.25em 1.5em;
   }
 }
 @media screen and (max-width: 470px) {
@@ -499,13 +500,13 @@ p {
 @media screen and (max-width: 700px) {
   .hero__sec .hero__bg .hero__copy h1 {
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 40px;
   }
 }
 @media screen and (max-width: 370px) {
   .hero__sec .hero__bg .hero__copy h1 {
-    font-size: 30px;
+    font-size: 1.9rem;
   }
 }
 .hero__sec .hero__bg .hero__copy p {
@@ -583,7 +584,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   body {
-    padding: 0 24px;
+    padding: 0 1.5em;
   }
 }
 
@@ -696,7 +697,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 5.3125em;
+  padding: 0 5.3em;
   margin-bottom: 12.5em;
 }
 @media screen and (max-width: 1440px) and (min-width: 1024px) {
@@ -707,12 +708,12 @@ p {
 @media screen and (max-width: 1023px) {
   .collection__sec {
     padding: 0;
-    margin-bottom: 144px;
+    margin-bottom: 9em;
   }
 }
 @media screen and (max-width: 700px) {
   .collection__sec {
-    margin-bottom: 70px;
+    margin-bottom: 4.4em;
   }
 }
 .collection__sec .collection__title {
@@ -731,7 +732,7 @@ p {
 }
 @media screen and (max-width: 700px) {
   .collection__sec .collection__title {
-    margin-bottom: 11px;
+    margin-bottom: 0.7em;
   }
 }
 .collection__sec .collection__title::after {
@@ -798,7 +799,7 @@ p {
 }
 @media screen and (max-width: 1023px) {
   .collection__sec .collection__cards {
-    padding: 0 57px;
+    padding: 0 3.6em;
   }
 }
 @media screen and (max-width: 540px) {
@@ -812,14 +813,14 @@ p {
 @media screen and (max-width: 1023px) {
   .collection__sec .collection__cards .collection__card {
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 2em;
   }
 }
 @media screen and (max-width: 700px) {
   .collection__sec .collection__cards .collection__card {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 4.4em;
   }
 }
 .collection__sec .collection__cards .collection__card .card__image {
@@ -828,11 +829,11 @@ p {
   justify-content: center;
 }
 .collection__sec .collection__cards .collection__card .card__image img {
-  width: 255px;
+  max-width: 255px;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   .collection__sec .collection__cards .collection__card .card__image img {
-    width: 200px;
+    max-width: 200px;
   }
 }
 .collection__sec .collection__cards .collection__card .card__copy {
@@ -910,7 +911,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   body {
-    padding: 0 24px;
+    padding: 0 1.5em;
   }
 }
 
@@ -1026,9 +1027,9 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #333d4b;
-  padding: 6.25em 5.3125em 0em 5.3125em;
+  padding: 6.25em 5.3em 0em 5.3em;
   border-radius: 8px;
-  margin-bottom: 351px;
+  margin-bottom: 22em;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   .why__sec {
@@ -1037,18 +1038,18 @@ p {
 }
 @media screen and (max-width: 1023px) {
   .why__sec {
-    padding: 56px 57px 0 57px;
+    padding: 3.5em 3.6em 0 3.6em;
   }
 }
 @media screen and (max-width: 700px) {
   .why__sec {
-    margin-bottom: 320px;
+    margin-bottom: 20em;
   }
 }
 @media screen and (max-width: 590px) {
   .why__sec {
-    padding: 74px 24px 0 24px;
-    margin-bottom: 590px;
+    padding: 4.6em 1.5em 0 1.5em;
+    margin-bottom: 36.9em;
   }
 }
 .why__sec .why__copy {
@@ -1071,12 +1072,12 @@ p {
 }
 @media screen and (max-width: 590px) {
   .why__sec .why__copy h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 370px) {
   .why__sec .why__copy h2 {
-    font-size: 25px;
+    font-size: 1.6rem;
   }
 }
 .why__sec .why__copy p {
@@ -1085,7 +1086,7 @@ p {
 }
 @media screen and (max-width: 1023px) {
   .why__sec .why__copy p {
-    margin-bottom: 70px;
+    margin-bottom: 4.4em;
   }
 }
 .why__sec .why__cards {
@@ -1096,22 +1097,22 @@ p {
 @media screen and (max-width: 1023px) {
   .why__sec .why__cards {
     flex-direction: column;
-    margin-bottom: -320px;
+    margin-bottom: -20em;
   }
 }
 @media screen and (max-width: 768px) {
   .why__sec .why__cards {
-    margin-bottom: -360px;
+    margin-bottom: -22.5em;
   }
 }
 @media screen and (max-width: 700px) {
   .why__sec .why__cards {
-    margin-bottom: -350px;
+    margin-bottom: -21.9em;
   }
 }
 @media screen and (max-width: 590px) {
   .why__sec .why__cards {
-    margin-bottom: -600px;
+    margin-bottom: -37.5em;
   }
 }
 .why__sec .why__cards .why__card {
@@ -1131,14 +1132,14 @@ p {
   .why__sec .why__cards .why__card {
     flex-direction: row;
     align-items: center;
-    padding: 41px 48px 41px 70px;
-    margin: 0 0 24px 0;
+    padding: 2.6em 3em 2.6em 4.4em;
+    margin: 0 0 1.5em 0;
   }
 }
 @media screen and (max-width: 590px) {
   .why__sec .why__cards .why__card {
     flex-direction: column;
-    padding: 72px 33px 51px 33px;
+    padding: 4.5em 2em 3.2em 2em;
   }
 }
 .why__sec .why__cards .why__card:not(:last-child) {
@@ -1156,7 +1157,7 @@ p {
 }
 @media screen and (max-width: 590px) {
   .why__sec .why__cards .why__card .card__image {
-    margin-bottom: 56px;
+    margin-bottom: 3.5em;
   }
 }
 .why__sec .why__cards .why__card .card__image img {
@@ -1169,7 +1170,7 @@ p {
 @media screen and (max-width: 1023px) {
   .why__sec .why__cards .why__card .card__copy {
     text-align: start;
-    margin-left: 55px;
+    margin-left: 3.43em;
   }
 }
 @media screen and (max-width: 590px) {
@@ -1232,7 +1233,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   body {
-    padding: 0 24px;
+    padding: 0 1.5em;
   }
 }
 
@@ -1343,8 +1344,8 @@ p {
 
 .how__sec {
   width: auto;
-  margin-left: 80px;
-  margin-bottom: 200px;
+  margin-left: 5em;
+  margin-bottom: 12.5em;
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
   .how__sec {
@@ -1354,7 +1355,7 @@ p {
 }
 @media screen and (max-width: 1023px) {
   .how__sec {
-    margin: 100px 0 140px 0;
+    margin: 6.25em 0 8.75em 0;
   }
 }
 .how__sec .how__title {
@@ -1370,7 +1371,7 @@ p {
 }
 .how__sec .how__title h4 {
   color: #83888f;
-  margin-bottom: 80px;
+  margin-bottom: 3.4em;
 }
 .how__sec .how__cards {
   width: 100%;
@@ -1405,14 +1406,14 @@ p {
     min-width: none;
   }
   .how__sec .how__cards .how__card:not(:last-child) {
-    margin: 0 0 56px 0;
+    margin: 0 0 3.5em 0;
   }
 }
 .how__sec .how__cards .how__card .progress__bar {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 67px;
+  margin-bottom: 4.2em;
 }
 @media screen and (max-width: 767px) {
   .how__sec .how__cards .how__card .progress__bar {
@@ -1424,21 +1425,23 @@ p {
   color: #0e8784;
   background-color: #fefcf7;
 }
-.how__sec .how__cards .how__card .progress__bar span:not(:last-child) {
-  margin-right: 350px;
-}
 .how__sec .how__cards .how__card .progress__bar span:not(:last-child)::before {
   content: "";
   position: absolute;
   background-color: #fdd6ba;
   width: 349px;
   height: 2px;
-  left: 29.9px;
+  left: 31px;
   top: 13.5px;
 }
-@media screen and (max-width: 1270px) and (min-width: 1024px) {
+@media screen and (max-width: 1270px) {
   .how__sec .how__cards .how__card .progress__bar span:not(:last-child)::before {
-    width: 340px;
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1085px) {
+  .how__sec .how__cards .how__card .progress__bar span:not(:last-child)::before {
+    width: 319px;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1461,12 +1464,18 @@ p {
 }
 .how__sec .how__cards .how__card .card__copy .card__title {
   margin-bottom: 1.3125em;
+  padding-right: 1em;
 }
 @media screen and (max-width: 700px) {
   .how__sec .how__cards .how__card .card__copy .card__title {
-    margin-bottom: 24px;
-    font-size: 28px;
+    margin-bottom: 0.9em;
+    font-size: 1.75rem;
     line-height: 32px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .how__sec .how__cards .how__card .card__copy .card__title {
+    padding-right: 0;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -1527,7 +1536,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   body {
-    padding: 0 24px;
+    padding: 0 1.5em;
   }
 }
 
@@ -1648,7 +1657,7 @@ p {
 @media screen and (max-width: 1023px) {
   .footer {
     flex-direction: column;
-    padding: 54px 190px 54px 215px;
+    padding: 3.4em 11.9em 3.4em 13.5em;
   }
 }
 @media screen and (max-width: 1270px) and (min-width: 1024px) {
@@ -1675,7 +1684,7 @@ p {
 }
 @media screen and (max-width: 1023px) {
   .footer .logo__nav .logo {
-    margin: 0 0 32px 0;
+    margin: 0 0 2em 0;
   }
 }
 .footer .logo__nav .nav__footer {
@@ -1697,7 +1706,7 @@ p {
   transition: color 200ms ease-in-out;
 }
 .footer .logo__nav .nav__footer a:not(:last-child) {
-  margin-right: 33px;
+  margin-right: 2.75em;
 }
 .footer .logo__nav .nav__footer a:hover {
   color: #fefcf7;
@@ -1705,16 +1714,16 @@ p {
 @media screen and (max-width: 390px) {
   .footer .logo__nav .nav__footer a:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 24px;
+    margin-bottom: 2em;
   }
 }
 @media screen and (max-width: 1023px) {
   .footer .social_icons {
-    margin-top: 65px;
+    margin-top: 4.1em;
   }
 }
 .footer .social_icons .icon {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #fefcf7;
   transition: color 200ms ease-in-out;
 }

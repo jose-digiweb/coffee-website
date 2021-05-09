@@ -19,13 +19,13 @@
 
     @media screen and(max-width: 700px) {
       display: block;
-      font-size: 20px;
+      font-size: 1.25rem; //20px
       cursor: pointer;
     }
   }
 
   .mobile__close {
-    font-size: 20px;
+    font-size: 1.5rem; //20px
     cursor: pointer;
     display: none;
   }
@@ -53,7 +53,7 @@
       top: 113px;
       left: 0;
       z-index: 2;
-      transition: all 400ms ease-in-out;
+      transition: height 400ms ease-in-out;
     }
 
     @media screen and(max-width: 390px) {
@@ -84,7 +84,8 @@
         text-transform: capitalize;
         color: $darkGray;
         visibility: hidden;
-        transition: all 300ms ease-in-out;
+        transition-property: visibility, font-size;
+        transition: 300ms ease-in-out;
 
         &:not(:last-child) {
           margin-right: 0;

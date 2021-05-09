@@ -5,8 +5,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 5.3125em;
-  margin-bottom: 12.5em;
+  padding: 0 5.3em; //85px
+  margin-bottom: 12.5em; //200px
 
   @media screen and(max-width: 1440px) and (min-width: 1024px) {
     padding: 0 2em;
@@ -14,11 +14,11 @@
 
   @media screen and(max-width: 1023px) {
     padding: 0;
-    margin-bottom: 144px;
+    margin-bottom: 9em; //144px
   }
 
   @media screen and(max-width: 700px) {
-    margin-bottom: 70px;
+    margin-bottom: 4.4em; //70px
   }
 
   .collection__title {
@@ -35,7 +35,7 @@
     }
 
     @media screen and(max-width: 700px) {
-      margin-bottom: 11px;
+      margin-bottom: 0.7em; //11px
     }
 
     &::after {
@@ -53,7 +53,7 @@
     }
 
     h2 {
-      font-size: 9.9rem;
+      font-size: 9.9rem; //158px
       opacity: 0.2;
       text-transform: lowercase;
 
@@ -100,7 +100,7 @@
     }
 
     @media screen and(max-width: 1023px) {
-      padding: 0 57px;
+      padding: 0 3.6em; //57px
     }
 
     @media screen and(max-width: 540px) {
@@ -112,13 +112,13 @@
 
       @media screen and(max-width: 1023px) {
         display: flex;
-        margin-bottom: 32px;
+        margin-bottom: 2em; //32px
       }
 
       @media screen and(max-width: 700px) {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 70px;
+        margin-bottom: 4.4em; //70px
       }
 
       .card__image {
@@ -127,10 +127,10 @@
         justify-content: center;
 
         img {
-          width: 255px;
+          max-width: 255px;
 
           @media screen and(max-width: 1270px) and (min-width: 1024px) {
-            width: 200px;
+            max-width: 200px;
           }
         }
       }
@@ -138,7 +138,7 @@
       .card__copy {
         width: 100%;
         text-align: center;
-        margin-top: 4.4375em;
+        margin-top: 4.4375em; //px
 
         @media screen and(max-width: 1023px) {
           text-align: start;

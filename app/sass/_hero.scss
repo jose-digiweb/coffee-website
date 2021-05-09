@@ -11,11 +11,11 @@
   }
 
   @media screen and(max-width: 1023px) {
-    margin-bottom: 144px;
+    margin-bottom: 9em; //144px
   }
 
   @media screen and(max-width: 700px) {
-    margin-bottom: 80px;
+    margin-bottom: 5em; //80px
   }
 
   .hero__bg {
@@ -24,7 +24,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    padding: 7.5em 5.3em;
+    padding: 7.5em 5.3em; //120px 85px
     border-radius: 8px;
 
     @media screen and(max-width: 1270px) and (min-width: 1024px) {
@@ -40,7 +40,7 @@
     @media screen and(max-width: 700px) {
       background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
       background-position: bottom center;
-      padding: 100px 24px;
+      padding: 6.25em 1.5em; // 100px 24px
     }
 
     @media screen and(max-width: 470px) {
@@ -85,12 +85,12 @@
 
         @media screen and(max-width: 700px) {
           text-align: center;
-          font-size: 40px;
+          font-size: 2.5rem; //40px
           line-height: 40px;
         }
 
         @media screen and(max-width: 370px) {
-          font-size: 30px;
+          font-size: 1.9rem; //30px
         }
       }
 

@@ -3,8 +3,8 @@
 
 .how__sec {
   width: auto;
-  margin-left: 80px;
-  margin-bottom: 200px;
+  margin-left: 5em; //80px
+  margin-bottom: 12.5em; //200px
 
   @media screen and(max-width: 1270px) and (min-width: 1024px) {
     margin-left: 0px;
@@ -12,7 +12,7 @@
   }
 
   @media screen and(max-width: 1023px) {
-    margin: 100px 0 140px 0;
+    margin: 6.25em 0 8.75em 0; //100px 0 140px 0
   }
 
   .how__title {
@@ -27,7 +27,7 @@
 
     h4 {
       color: $gray;
-      margin-bottom: 80px;
+      margin-bottom: 3.4em; //80px
     }
   }
 
@@ -63,7 +63,7 @@
         min-width: none;
 
         &:not(:last-child) {
-          margin: 0 0 56px 0;
+          margin: 0 0 3.5em 0; // 0 0 56px 0
         }
       }
 
@@ -71,7 +71,7 @@
         width: 100%;
         display: flex;
         align-items: center;
-        margin-bottom: 67px;
+        margin-bottom: 4.2em; //67px
 
         @media screen and(max-width: 767px) {
           display: none;
@@ -82,21 +82,21 @@
           color: $darkCyan;
           background-color: $lightCream;
 
-          &:not(:last-child) {
-            margin-right: 350px;
-          }
-
           &:not(:last-child)::before {
             content: '';
             position: absolute;
             background-color: $paleOrange;
             width: 349px;
             height: 2px;
-            left: 29.9px;
+            left: 31px;
             top: 13.5px;
 
-            @media screen and(max-width: 1270px) and (min-width: 1024px) {
-              width: 340px;
+            @media screen and(max-width: 1270px) {
+              width: 350px;
+            }
+
+            @media screen and(max-width: 1085px) {
+              width: 319px;
             }
 
             @media screen and(max-width: 1023px) {
@@ -123,11 +123,16 @@
 
         .card__title {
           margin-bottom: 1.3125em;
+          padding-right: 1em;
 
           @media screen and(max-width: 700px) {
-            margin-bottom: 24px;
-            font-size: 28px;
+            margin-bottom: 0.9em; //24px
+            font-size: 1.75rem; //28px
             line-height: 32px;
+          }
+
+          @media screen and(max-width: 780px) {
+            padding-right: 0;
           }
         }
 

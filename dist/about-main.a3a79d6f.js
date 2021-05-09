@@ -117,73 +117,79 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/mobileMenu.js":[function(require,module,exports) {
-var btnMenu = document.querySelector('.mobile__menu');
-var mobileClose = document.querySelector('.mobile__close');
-var nav = document.querySelector('.nav__top');
-var navLinks = document.querySelectorAll('.nav__top a');
-var overlay = document.querySelector('.overlay__menu');
-var body = document.querySelector('body'); //-----
-// This if statement will make sure this Function will only applies for mobile viewport.
-//-----
+})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
 
-if (window.innerWidth <= 700) {
-  //---
-  //Opening the Mobile Menu
-  //---
-  btnMenu.addEventListener('click', function () {
-    btnMenu.style.display = 'none';
-    mobileClose.style.display = 'block';
-    overlay.style.visibility = 'visible';
-    overlay.style.height = '100vh';
-    nav.style.height = '250px';
-    body.style.overflow = 'hidden';
-    setTimeout(function () {
-      navLinks[0].style.visibility = 'visible';
-      navLinks[0].style.fontSize = '24px';
-    }, 200);
-    setTimeout(function () {
-      navLinks[1].style.visibility = 'visible';
-      navLinks[1].style.fontSize = '24px';
-    }, 300);
-    setTimeout(function () {
-      navLinks[2].style.visibility = 'visible';
-      navLinks[2].style.fontSize = '24px';
-    }, 400);
-  }); //---
-  // Closing the Mobile Menu
-  //---
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
 
-  mobileClose.addEventListener('click', function () {
-    setTimeout(function () {
-      navLinks[0].style.visibility = 'hidden';
-      navLinks[0].style.fontSize = '0';
-    }, 300);
-    setTimeout(function () {
-      navLinks[1].style.visibility = 'hidden';
-      navLinks[1].style.fontSize = '0';
-    }, 200);
-    setTimeout(function () {
-      navLinks[2].style.visibility = 'hidden';
-      navLinks[2].style.fontSize = '0';
-    }, 100);
-    setTimeout(function () {
-      nav.style.height = '0';
-    }, 300);
-    setTimeout(function () {
-      overlay.style.visibility = 'hidden';
-      overlay.style.height = '0';
-    }, 400);
-    mobileClose.style.display = 'none';
-    btnMenu.style.display = 'block';
-    body.style.overflow = 'scroll';
-  });
+  return bundleURL;
 }
-},{}],"js/main.js":[function(require,module,exports) {
-"use strict";
 
-var _mobileMenu = require("./mobileMenu");
-},{"./mobileMenu":"js/mobileMenu.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"about/about-main.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./..\\assets\\about\\desktop\\image-hero-whitecup.jpg":[["image-hero-whitecup.0a15319f.jpg","assets/about/desktop/image-hero-whitecup.jpg"],"assets/about/desktop/image-hero-whitecup.jpg"],"./..\\assets\\about\\tablet\\image-hero-whitecup.jpg":[["image-hero-whitecup.5a78c160.jpg","assets/about/tablet/image-hero-whitecup.jpg"],"assets/about/tablet/image-hero-whitecup.jpg"],"./..\\assets\\about\\mobile\\image-hero-whitecup.jpg":[["image-hero-whitecup.7a106164.jpg","assets/about/mobile/image-hero-whitecup.jpg"],"assets/about/mobile/image-hero-whitecup.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -387,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
-//# sourceMappingURL=/main.fb6bbcaf.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/about-main.a3a79d6f.js.map

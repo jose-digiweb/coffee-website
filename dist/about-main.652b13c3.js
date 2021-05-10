@@ -223,13 +223,59 @@ window.addEventListener('resize', function () {
     commitImage.src = _imageCommitment3.default;
   }
 });
-},{"../assets/about/tablet/image-commitment.jpg":"assets/about/tablet/image-commitment.jpg","../assets/about/desktop/image-commitment.jpg":"assets/about/desktop/image-commitment.jpg","../assets/about/mobile/image-commitment.jpg":"assets/about/mobile/image-commitment.jpg"}],"js/about-main.js":[function(require,module,exports) {
+},{"../assets/about/tablet/image-commitment.jpg":"assets/about/tablet/image-commitment.jpg","../assets/about/desktop/image-commitment.jpg":"assets/about/desktop/image-commitment.jpg","../assets/about/mobile/image-commitment.jpg":"assets/about/mobile/image-commitment.jpg"}],"assets/about/tablet/image-quality.jpg":[function(require,module,exports) {
+module.exports = "/image-quality.8ce79933.jpg";
+},{}],"assets/about/desktop/image-quality.jpg":[function(require,module,exports) {
+module.exports = "/image-quality.310619e1.jpg";
+},{}],"assets/about/mobile/image-quality.jpg":[function(require,module,exports) {
+module.exports = "/image-quality.d1a68c10.jpg";
+},{}],"js/about-qulity-images.js":[function(require,module,exports) {
+"use strict";
+
+var _imageQuality = _interopRequireDefault(require("../assets/about/tablet/image-quality.jpg"));
+
+var _imageQuality2 = _interopRequireDefault(require("../assets/about/desktop/image-quality.jpg"));
+
+var _imageQuality3 = _interopRequireDefault(require("../assets/about/mobile/image-quality.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var qualityImage = document.querySelector('.quality__image img');
+
+if (window.innerWidth <= 1200) {
+  qualityImage.src = _imageQuality.default;
+}
+
+if (window.innerWidth > 1200) {
+  qualityImage.src = _imageQuality2.default;
+}
+
+if (window.innerWidth <= 700) {
+  qualityImage.src = _imageQuality3.default;
+}
+
+window.addEventListener('resize', function () {
+  if (window.innerWidth >= 1200) {
+    qualityImage.src = _imageQuality2.default;
+  }
+
+  if (window.innerWidth <= 1200) {
+    qualityImage.src = _imageQuality.default;
+  }
+
+  if (window.innerWidth <= 700) {
+    qualityImage.src = _imageQuality3.default;
+  }
+});
+},{"../assets/about/tablet/image-quality.jpg":"assets/about/tablet/image-quality.jpg","../assets/about/desktop/image-quality.jpg":"assets/about/desktop/image-quality.jpg","../assets/about/mobile/image-quality.jpg":"assets/about/mobile/image-quality.jpg"}],"js/about-main.js":[function(require,module,exports) {
 "use strict";
 
 var _mobileMenu = require("./mobileMenu");
 
 var _aboutCommitImage = require("./about-commit-image");
-},{"./mobileMenu":"js/mobileMenu.js","./about-commit-image":"js/about-commit-image.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+var _aboutQulityImages = require("./about-qulity-images");
+},{"./mobileMenu":"js/mobileMenu.js","./about-commit-image":"js/about-commit-image.js","./about-qulity-images":"js/about-qulity-images.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -257,7 +303,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54811" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63131" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

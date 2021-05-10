@@ -81,12 +81,16 @@
   justify-content: center;
   margin-bottom: 256px; //168px + 88px from the quality image(-88px)
 
+  @media screen and(max-width: 1200px) {
+    margin-bottom: 0; // Resetting the margin from the quality section
+  }
+
   @media screen and(max-width: 935px) {
     margin-bottom: 144px;
   }
 
   @media screen and(max-width: 700px) {
-    margin-bottom: 120px;
+    margin-bottom: 198px; // 78px Resetting the margin from the quality section (the value came from quality image negative margin) + 120px of white space.
   }
 
   .commitment__wrapper {
@@ -164,38 +168,193 @@
   display: flex;
   background-color: $darkGray;
   justify-content: center;
-  padding: 0 85px 88px 85px;
   margin-bottom: 168px;
+  padding: 0 85px;
   border-radius: 8px;
 
+  @media screen and(max-width: 1200px) {
+    margin-top: 313px; //169px from the minus(image) + 144px the next section white space
+    padding: 0 100px;
+  }
+
+  @media screen and(max-width: 1024px) {
+    padding: 0 60px;
+  }
+
+  @media screen and(max-width: 700px) {
+    margin-top: 0;
+    margin-bottom: 120px;
+    padding: 0 24px;
+  }
+
   .quality__wrapper {
-    width: 100%;
+    max-width: 1280px;
     display: flex;
-    align-items: center;
-    margin-top: -88px;
+
+    @media screen and(max-width: 1200px) {
+      flex-direction: column;
+    }
 
     .quality__copy {
       max-width: 540px;
       margin-right: 125px;
+      margin-top: 88px;
+      margin-bottom: 85px;
+
+      @media screen and(max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: none;
+        text-align: center;
+        padding: 50px 100px 67px 100px;
+        margin: 0;
+        order: 1;
+      }
+
+      @media screen and(max-width: 1024px) {
+        padding: 50px 50px 67px 50px;
+      }
+
+      @media screen and(max-width: 900px) {
+        padding: 50px 32px 67px 32px;
+      }
+
+      @media screen and(max-width: 700px) {
+        padding: 60px 0 61px 0;
+      }
 
       h2 {
         font-size: 40px;
         line-height: 48px;
         color: $lightCream;
         margin-bottom: 32px;
+
+        @media screen and(max-width: 1200px) {
+          font-size: 32px;
+          line-height: 48px;
+        }
+
+        @media screen and(max-width: 700px) {
+          font-size: 28px;
+          line-height: 28px;
+        }
       }
 
       p {
         color: $lightCream;
         opacity: 0.8;
+
+        @media screen and(max-width: 1200px) {
+          font-size: 15px;
+          line-height: 25px;
+        }
       }
     }
 
     .quality__image {
       max-width: 445px;
+      transform: translateY(-88px);
+
+      @media screen and(max-width: 1200px) {
+        max-width: none;
+        transform: translateY(0px);
+        margin-top: -169px;
+      }
+
+      @media screen and(max-width: 700px) {
+        // max-width: 279px;
+        margin-top: -78px;
+      }
 
       img {
         border-radius: 8px;
+      }
+    }
+  }
+}
+
+.headquarters {
+  width: 100%;
+  margin-bottom: 144px;
+  padding-left: 85px;
+
+  @media screen and(max-width: 1200px) {
+    padding-left: 20px;
+  }
+
+  @media screen and(max-width: 700px) {
+    margin-bottom: 120px;
+    padding: 0;
+  }
+
+  .head__tittle {
+    width: 100%;
+
+    @media screen and(max-width: 700px) {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 32px;
+      color: $gray;
+      margin-bottom: 72px;
+    }
+  }
+
+  .head__cards {
+    width: 100%;
+    display: flex;
+
+    @media screen and(max-width: 700px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .head__card {
+      max-width: 285px;
+      display: flex;
+      flex-direction: column;
+      margin-right: 95px;
+
+      @media screen and(max-width: 1200px) {
+        max-width: 223px;
+        margin-right: 50px;
+      }
+
+      @media screen and(max-width: 700px) {
+        max-width: 327px;
+        align-items: center;
+        text-align: center;
+        margin-right: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 80px;
+        }
+      }
+
+      .head__image {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 48px;
+      }
+
+      .head__copy {
+        h3 {
+          font-size: 32px;
+          line-height: 36px;
+          margin-bottom: 24px;
+
+          @media screen and(max-width: 1200px) {
+            font-size: 24px;
+            margin-bottom: 22px;
+          }
+
+          @media screen and(max-width: 700px) {
+            font-size: 28px;
+          }
+        }
       }
     }
   }

@@ -16,11 +16,19 @@ html {
   align-items: center;
 
   h1 {
-    font-size: 3em;
+    font-size: 3rem;
     font-family: $fraunces;
     text-transform: uppercase;
     color: $lightCream;
     margin-bottom: 1em;
+
+    @media screen and(max-width: 700px) {
+      font-size: 2rem;
+    }
+
+    @media screen and(max-width: 370px) {
+      font-size: 1.5rem;
+    }
   }
 
   a {

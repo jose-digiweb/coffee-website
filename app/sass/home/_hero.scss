@@ -1,0 +1,126 @@
+@import '../variables';
+
+.hero__sec {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 12.5em;
+
+  @media screen and(max-width: 1270px) and (min-width: 1024px) {
+    margin-bottom: 8em;
+  }
+
+  @media screen and(max-width: 1023px) {
+    margin-bottom: 9em; //144px
+  }
+
+  @media screen and(max-width: 700px) {
+    margin-bottom: 5em; //80px
+  }
+
+  .hero__bg {
+    width: 100%;
+    background-image: url(../assets/home/desktop/image-hero-coffeepress.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 7.5em 5.3em; //120px 85px
+    border-radius: 8px;
+
+    @media screen and(max-width: 1270px) and (min-width: 1024px) {
+      padding: 7.5em 3em;
+    }
+
+    @media screen and(max-width: 1023px) {
+      background-image: url(../assets/home/tablet/image-hero-coffeepress.jpg);
+
+      padding: 6.6em 3.6em;
+    }
+
+    @media screen and(max-width: 700px) {
+      background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+      background-position: bottom center;
+      padding: 6.25em 1.5em; // 100px 24px
+    }
+
+    @media screen and(max-width: 470px) {
+      background-position: top center;
+    }
+
+    .hero__copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 493px;
+
+      @media screen and(max-width: 1023px) {
+        max-width: 410px;
+      }
+
+      @media screen and(max-width: 700px) {
+        max-width: none;
+        align-items: center;
+        padding: 0 5em;
+      }
+
+      @media screen and(max-width: 540px) {
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 4.5rem;
+        color: $lightCream;
+        margin-bottom: 0.5em;
+
+        @media screen and(max-width: 1270px) and (min-width: 1024px) {
+          font-size: 3.8rem;
+          line-height: 1.2em;
+          margin-bottom: 0.4em;
+        }
+
+        @media screen and(max-width: 1023px) {
+          font-size: 3rem;
+          line-height: 48px;
+        }
+
+        @media screen and(max-width: 700px) {
+          text-align: center;
+          font-size: 2.5rem; //40px
+          line-height: 40px;
+        }
+
+        @media screen and(max-width: 370px) {
+          font-size: 1.9rem; //30px
+        }
+      }
+
+      p {
+        line-height: 1.625rem;
+        color: $lightCream;
+        margin-bottom: 3.5em;
+        padding-right: 3.5em;
+        opacity: 0.8;
+
+        @media screen and(max-width: 1023px) {
+          padding-right: 1em;
+        }
+
+        @media screen and(max-width: 700px) {
+          padding-right: 0;
+          text-align: center;
+        }
+      }
+
+      .hero__button {
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        @media screen and(max-width: 700px) {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

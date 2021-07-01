@@ -2,15 +2,23 @@
   "name": "coffee-website",
   "version": "1.0.0",
   "description": "This is a challenge from the Frontend Mentor Website. Creating a complete Website for a Coffee provider business",
-  "main": "index.js",
+  "default": "index.html",
   "scripts": {
-    "dev": "parcel app/index.html",
-    "build": "parcel build app/index.html"
+    "start": "parcel app/index.html",
+    "build": "parcel build app/index.html --dist-dir ./dist"
   },
   "author": "Jose Furtado",
   "license": "ISC",
   "devDependencies": {
-    "parcel-bundler": "^1.12.5",
+    "@parcel/transformer-image": "^2.0.0-beta.3.1",
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
+    "core-js": "^3.15.2",
+    "regenerator-runtime": "^0.13.7",
     "sass": "^1.32.12"
+  },
+  "dependencies": {
+    "i": "^0.3.6",
+    "npm": "^7.19.1",
+    "parcel": "^2.0.0-beta.3.1"
   }
 }

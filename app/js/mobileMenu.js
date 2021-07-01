@@ -1,3 +1,6 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 const btnMenu = document.querySelector('.mobile__menu');
 const mobileClose = document.querySelector('.mobile__close');
 const nav = document.querySelector('.nav__top');

@@ -1,0 +1,140 @@
+@import './variables';
+@import './global';
+@import './about/about-global';
+
+.header {
+  width: 100%;
+  max-width: 1280px;
+  height: 113px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+
+  @media screen and(max-width: 390px) {
+    height: 90px;
+  }
+
+  .mobile__open {
+    display: block;
+    font-size: 1.25rem; //20px
+    cursor: pointer;
+  }
+
+  .mobile__close {
+    font-size: 1.5rem; //20px
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .nav__desktop {
+    ul {
+      display: flex;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 33px;
+      }
+    }
+
+    li a {
+      font-family: $barlow;
+      font-weight: 700;
+      font-size: 0.75rem;
+      line-height: 1;
+      color: $gray;
+      text-transform: uppercase;
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: $darkGray;
+      }
+    }
+  }
+
+  .navAnimationOpen {
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+
+    @keyframes showMenu {
+      from {
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        padding: 0;
+      }
+
+      to {
+        visibility: visible;
+        overflow: visible;
+        height: 100vh;
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  .NavAnimationClose {
+    @keyframes hideMenu {
+      from {
+        visibility: visible;
+        overflow: visible;
+        height: 100vh;
+        padding: 2rem 0;
+      }
+
+      to {
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .nav__mobile {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 113px;
+    left: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background: linear-gradient(
+      rgba(254, 252, 247, 1) 35%,
+      rgba(254, 252, 247, 0.1)
+    );
+    z-index: 2;
+
+    @media screen and(max-width: 700px) {
+      top: 89px;
+    }
+
+    ul {
+      text-align: center;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
+    }
+
+    a {
+      font-family: $fraunces;
+      font-size: 1.5rem;
+      line-height: 32px;
+      color: $darkGray;
+      text-transform: capitalize;
+    }
+  }
+}

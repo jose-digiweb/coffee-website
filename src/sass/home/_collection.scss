@@ -1,0 +1,156 @@
+@import '../global';
+@import '../variables';
+@import './home__global';
+
+.collection__sec {
+  width: 100%;
+  max-width: 1111px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 168px; //200px
+
+  @media screen and(max-width: 1024px) {
+  }
+
+  @media screen and(max-width: 700px) {
+    margin-bottom: 4.4em; //70px
+  }
+
+  .collection__title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    opacity: 0.4;
+
+    @media screen and(max-width: 700px) {
+      opacity: 0.7;
+    }
+
+    ::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 2rem;
+      left: 0;
+      opacity: 0.9;
+
+      background: linear-gradient(
+        0deg,
+        rgba(254, 252, 247, 1),
+        rgba(254, 252, 247, 0)
+      );
+
+      @media screen and(max-width: 700px) {
+        top: 0;
+      }
+    }
+  }
+
+  h2 {
+    font-size: clamp(2.6rem, 11vw, 145px);
+    opacity: 0.5;
+    text-transform: lowercase;
+  }
+}
+
+.collection__cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 1em;
+  margin-top: -0.5rem;
+  z-index: 1;
+
+  @media screen and(max-width: 1024px) {
+    flex-direction: column;
+    margin-top: -1rem;
+    padding: 0;
+  }
+
+  @media screen and(max-width: 700px) {
+    flex-direction: column;
+    margin-top: 3rem;
+    padding: 0;
+  }
+
+  .collection__card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and(max-width: 1024px) {
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 2em; //32px
+    }
+
+    @media screen and(max-width: 700px) {
+      flex-direction: column;
+      align-items: center;
+
+      margin-bottom: 4.4em; //70px
+    }
+
+    .card__image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @media screen and(max-width: 1024px) {
+        max-width: 255px;
+        justify-content: flex-end;
+        margin-right: 36px;
+      }
+
+      @media screen and(max-width: 700px) {
+        margin-bottom: 2.5rem;
+      }
+
+      img {
+        @media screen and(max-width: 1024px) {
+          max-width: 200px;
+        }
+      }
+    }
+
+    .card__copy {
+      width: 100%;
+      text-align: center;
+      margin-top: 4.4375em; //px
+
+      @media screen and(max-width: 1024px) {
+        max-width: 282px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        margin-top: -1rem;
+      }
+
+      @media screen and(max-width: 700px) {
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+
+        @media screen and(max-width: 700px) {
+          font-size: 1.8rem;
+          margin-bottom: 16px;
+        }
+      }
+
+      p {
+        padding: 0 1.5em;
+
+        @media screen and(max-width: 1023px) {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

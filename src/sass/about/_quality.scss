@@ -1,0 +1,124 @@
+@import '../variables';
+@import './about-global';
+
+.quality {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 168px;
+
+  @media screen and(max-width: 1200px) {
+    margin-top: 313px; //169px from the minus(image) + 144px the next section white space
+  }
+
+  // @media screen and(max-width: 1024px) {
+  //   padding: 0 60px;
+  // }
+
+  @media screen and(max-width: 700px) {
+    margin-top: 0;
+    margin-bottom: 120px;
+    // padding: 0 24px;
+  }
+
+  .quality__wrapper {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 85px;
+    border-radius: 10px;
+    background-color: $darkGray;
+
+    @media screen and(max-width: 1200px) {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quality__copy {
+      max-width: 540px;
+      margin-top: 88px;
+      margin-right: 20px;
+
+      @media screen and(max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 540px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 67px;
+        order: 1;
+      }
+
+      h2 {
+        font-size: 40px;
+        line-height: 48px;
+        color: $lightCream;
+        margin-bottom: 32px;
+
+        @media screen and(max-width: 1200px) {
+          font-size: 32px;
+          line-height: 48px;
+          margin-bottom: 24px;
+        }
+
+        @media screen and(max-width: 700px) {
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
+
+      p {
+        color: $lightCream;
+        opacity: 0.8;
+
+        @media screen and(max-width: 1200px) {
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+    }
+
+    .quality__image {
+      width: 445px;
+      max-width: 445px;
+      height: 474px;
+      max-height: 474px;
+      border-radius: 10px;
+      transform: translateY(-88px);
+      background: url(../assets/about/desktop/image-quality.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media screen and(max-width: 1200px) {
+        width: 573px;
+        max-width: 573px;
+        height: 320px;
+        max-height: 320px;
+        transform: translateY(0px);
+        margin-top: -169px;
+        margin-bottom: 64px;
+        background: url(../assets/about/tablet/image-quality.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      @media screen and(max-width: 700px) {
+        width: 279px;
+        max-width: 279px;
+        height: 156px;
+        max-height: 156px;
+        margin-top: -78px;
+        background: url(../assets/about/mobile/image-quality.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

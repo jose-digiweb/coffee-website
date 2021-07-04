@@ -30,10 +30,10 @@
 
     <title>Frontend Mentor | Coffeeroasters subscription site</title>
 
-    <script defer src="./js/main.js"></script>
+    <script defer src="./js/controller.js"></script>
   </head>
 
-  <body>
+  <body class="home__body">
     <header class="header">
       <div class="logo">
         <img src="./assets/coffeeLogo.svg" alt="logo" />
@@ -41,41 +41,39 @@
         <span class="logo__text">coffeeroasters</span>
       </div>
 
-      <div class="nav__top">
-        <a href="/">Home</a>
-        <a href="./about.html">About us</a>
-        <a href="./coming.html">Create your plan</a>
-      </div>
+      <nav class="nav__desktop">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="./about.html">About us</a></li>
+          <li><a href="./coming.html">Create your plan</a></li>
+        </ul>
+      </nav>
 
-      <div class="mobile__menu">
+      <div class="mobile__open hidden">
         <i class="fas fa-bars"></i>
       </div>
 
-      <div class="mobile__close">
+      <div class="mobile__close hidden">
         <i class="fas fa-times"></i>
       </div>
     </header>
 
-    <main class="main">
+    <main class="home__main">
       <div class="overlay__menu"></div>
 
       <section class="hero__sec">
-        <div class="hero__bg">
-          <div class="hero__copy">
-            <h1 class="hero__title">Great coffee made simple.</h1>
+        <div class="hero__copy">
+          <h1 class="hero__title">Great coffee made simple.</h1>
 
-            <p class="hero__text">
-              Start your mornings with the world’s best coffees. Try our
-              expertly curated artisan coffees from our best roasters delivered
-              directly to your door, at your schedule.
-            </p>
+          <p class="hero__text">
+            Start your mornings with the world’s best coffees. Try our expertly
+            curated artisan coffees from our best roasters delivered directly to
+            your door, at your schedule.
+          </p>
+        </div>
 
-            <div class="hero__button">
-              <a href="./coming.html" class="btn__primary">
-                Create your plan
-              </a>
-            </div>
-          </div>
+        <div class="btn__primary">
+          <a href="./coming.html"> Create your plan </a>
         </div>
       </section>
 
@@ -294,7 +292,9 @@
         </div>
 
         <div class="how__btn">
-          <a href="./coming.html" class="btn__primary">Create your plan</a>
+          <div class="btn__primary">
+            <a href="./coming.html">Create your plan</a>
+          </div>
         </div>
       </section>
     </main>

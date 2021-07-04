@@ -1,0 +1,100 @@
+@import '../variables';
+@import './home__global';
+
+.hero__sec {
+  width: 100%;
+  max-width: 1280px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  padding-left: 85px;
+  margin-bottom: 190px;
+  background-image: url(../assets/home/desktop/image-hero-coffeepress.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media screen and(max-width: 1024px) {
+    height: 500px;
+    background-image: url(../assets/home/tablet/image-hero-coffeepress.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  @media screen and(max-width: 700px) {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 130px;
+    background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+
+  @media screen and(max-width: 470px) {
+    background-position: top center;
+  }
+
+  .hero__copy {
+    width: 493px;
+    max-width: 493px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 56px;
+
+    @media screen and(max-width: 1024px) {
+      width: 398px;
+      max-width: 398px;
+    }
+
+    @media screen and(max-width: 700px) {
+      width: 279px;
+      max-width: 279px;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 39px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      color: $lightCream;
+      margin-bottom: 0.5em;
+
+      @media screen and(max-width: 1024px) {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 24px;
+      }
+
+      @media screen and(max-width: 700px) {
+        text-align: center;
+        font-size: 2.5rem; //40px
+        line-height: 40px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      color: $lightCream;
+      padding-right: 49px;
+      opacity: 0.8;
+
+      @media screen and(max-width: 1024px) {
+        font-size: 15px;
+        line-height: 25px;
+        padding-right: 0;
+      }
+
+      @media screen and(max-width: 700px) {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+  }
+}

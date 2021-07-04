@@ -4,8 +4,8 @@
   "description": "This is a challenge from the Frontend Mentor Website. Creating a complete Website for a Coffee provider business",
   "default": "index.html",
   "scripts": {
-    "start": "parcel app/index.html",
-    "build": "parcel build app/index.html --dist-dir ./dist"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir ./dist"
   },
   "author": "Jose Furtado",
   "license": "ISC",

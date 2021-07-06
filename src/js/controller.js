@@ -6,8 +6,8 @@ import 'regenerator-runtime/runtime';
 import mobileMenuView from './views/mobileMenuView';
 
 const controlMobileMenu = function () {
-  mobileMenuView.addHandlerMobileMenu();
-  mobileMenuView.addHandlerOpenMenu();
-  mobileMenuView.addHandlerCloseMenu();
+  mobileMenuView.mobileMenuHandler();
+  mobileMenuView.openMenuHandler();
+  mobileMenuView.closeMenuHandler();
 };
 controlMobileMenu();

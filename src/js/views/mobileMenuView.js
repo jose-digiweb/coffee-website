@@ -5,12 +5,7 @@ import 'regenerator-runtime/runtime';
 //--> Configuration and Helper files
 import { BREAK_POINT } from '../config';
 
-import {
-  showMobileBtn,
-  hideMobileBtn,
-  AddMobileMenu,
-  AddDesktopMenu,
-} from '../helper';
+import { menuState } from '../helper';
 
 class MobileMenuView {
   _openBtn = document.querySelector('.mobile__open');
@@ -19,39 +14,39 @@ class MobileMenuView {
   _parentEl = document.querySelector('.header');
 
   _controlMobileMenu() {
-    if (window.innerWidth <= BREAK_POINT) {
-      AddMobileMenu(this._navMenu);
-      showMobileBtn(this._openBtn);
-    }
-
-    if (window.innerWidth > BREAK_POINT) {
-      hideMobileBtn(this._openBtn);
-      AddDesktopMenu(this._navMenu);
-    }
+    menuState(this._openBtn, this._navMenu);
   }
 
-  _menuState(state) {
-    this._navMenu.style.animationName = state;
-    this._openBtn.classList.toggle('hidden');
-    this._closeBtn.classList.toggle('hidden');
+  _menuOpenState() {
+    this._navMenu.classList.remove('hidden');
+    this._navMenu.classList.add('navAnimationOpen');
+    this._navMenu.style.animationName = 'showMenu';
+    this._openBtn.classList.add('hidden');
+    this._closeBtn.classList.remove('hidden');
   }
 
-  _controlMenu(btn, state) {
-    btn.addEventListener('click', state);
+  _menuCloseState() {
+    this._navMenu.style.animationName = 'hideMenu';
+    this._closeBtn.classList.add('hidden');
+    this._openBtn.classList.remove('hidden');
+
+    setTimeout(() => {
+      this._navMenu.classList.remove('navAnimationOpen');
+    }, 1000);
   }
 
-  addHandlerMobileMenu() {
+  mobileMenuHandler() {
     ['load', 'resize'].forEach((ev) => {
       window.addEventListener(ev, this._controlMobileMenu.bind(this));
     });
   }
 
-  addHandlerOpenMenu() {
-    this._controlMenu(this._openBtn, () => this._menuState('showMenu'));
+  openMenuHandler() {
+    this._openBtn.addEventListener('click', this._menuOpenState.bind(this));
   }
 
-  addHandlerCloseMenu() {
-    this._controlMenu(this._closeBtn, () => this._menuState('hideMenu'));
+  closeMenuHandler() {
+    this._closeBtn.addEventListener('click', this._menuCloseState.bind(this));
   }
 }
 

@@ -1,0 +1,129 @@
+@import '../global';
+@import '../variables';
+
+.process__sec {
+  width: 100%;
+  max-width: 1280px;
+  margin-bottom: 168px; //200px
+  background: $darkGray;
+  padding: 100px 50px 100px 85px;
+  border-radius: 10px;
+
+  @media screen and(max-width: 860px) {
+    padding: 50px;
+  }
+
+  .process__cards {
+    width: auto;
+    display: flex;
+
+    @media screen and(max-width: 860px) {
+      flex-direction: column;
+      margin-bottom: 5em;
+    }
+
+    .process__card {
+      max-width: 285px;
+      min-width: 200px;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 5.9375em;
+      }
+
+      @media screen and(max-width: 1023px) {
+        max-width: 223px;
+
+        &:not(:last-child) {
+          margin-right: 2em;
+        }
+      }
+
+      @media screen and(max-width: 860px) {
+        text-align: center;
+        max-width: none;
+        min-width: none;
+
+        &:not(:last-child) {
+          margin: 0 0 3.5em 0; // 0 0 56px 0
+        }
+      }
+
+      .progress__bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4.2em; //67px
+
+        @media screen and(max-width: 860px) {
+          display: none;
+        }
+
+        span {
+          font-size: 31px;
+          color: $darkCyan;
+          background: $darkGray;
+
+          &:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            background-color: $paleOrange;
+            width: 349px;
+            height: 2px;
+            left: 31px;
+            top: 13.5px;
+
+            @media screen and(max-width: 1270px) {
+              width: 350px;
+            }
+
+            @media screen and(max-width: 1085px) {
+              width: 319px;
+            }
+
+            @media screen and(max-width: 1023px) {
+              width: 230px;
+            }
+          }
+        }
+      }
+
+      .numbers {
+        width: 100%;
+        margin-bottom: 2.375em;
+
+        .number {
+          font-family: $fraunces;
+          font-size: 72px;
+          line-height: 72px;
+          color: $paleOrange;
+        }
+      }
+
+      .card__copy {
+        width: 100%;
+
+        .card__title {
+          font-size: 32px; //28px
+          line-height: 36px;
+          color: $lightCream;
+          margin-bottom: 1.3125em;
+          padding-right: 1em;
+
+          @media screen and(max-width: 860px) {
+            margin-bottom: 0.9em; //24px
+            font-size: 1.75rem; //28px
+            line-height: 32px;
+          }
+        }
+
+        p {
+          color: $lightCream;
+          @media screen and(max-width: 1023px) {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

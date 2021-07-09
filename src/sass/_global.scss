@@ -125,7 +125,20 @@ p {
   }
 
   &:hover {
-    background-color: $btnHover;
+    background: $btnHover;
+  }
+}
+
+.btn__disable {
+  background: $btnDisabled;
+  cursor: alias;
+
+  :first-child {
+    cursor: alias;
+  }
+
+  &:hover {
+    background: $btnDisabled;
   }
 }
 

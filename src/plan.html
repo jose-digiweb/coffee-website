@@ -31,7 +31,7 @@
     <title>Frontend Mentor | Coffeeroasters subscription site</title>
 
     <!--JavaScript File Link-->
-    <script defer src=""></script>
+    <script defer src="./js/controller.js"></script>
   </head>
 
   <body class="body plan__body">
@@ -149,8 +149,8 @@
           <ul class="navigation__list">
             <li class="list__item">
               <a class="navigation__link" href="#">
-                <span class="list__number">01</span>
-                <span class="list__text"> Preferences </span>
+                <span>01</span>
+                <span> Preferences </span>
               </a>
             </li>
 
@@ -386,9 +386,54 @@
               </div>
             </details>
           </div>
-          <div class="order__preview"></div>
+
+          <div class="order__preview">
+            <h4>ORDER SUMMARY</h4>
+            <p>
+              “I drink my coffee using <span>Capsules</span>, with a _____ type
+              of bean. _____, sent to me _____.”
+            </p>
+          </div>
+
+          <div class="btn__plan__container">
+            <div class="btn__primary btn__disable">
+              <a href="#"> Create my plan! </a>
+            </div>
+          </div>
         </div>
       </section>
+
+      <footer class="footer">
+        <div class="logo__nav">
+          <div class="logo">
+            <a href="/">
+              <img src="./assets/coffeeLogo.svg" alt="logo" />
+
+              <span class="logo__text text__footer">coffeeroasters</span>
+            </a>
+          </div>
+
+          <div class="nav__footer">
+            <a href="/">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./coming.html">Create your plan</a>
+          </div>
+        </div>
+
+        <div class="social_icons">
+          <a href="#" aria-label="Connect with us on Facebook" class="icon">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+
+          <a href="#" aria-label="Connect with us on Twitter" class="icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <a href="#" aria-label="Connect with us on Instagram" class="icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </footer>
     </main>
   </body>
 </html>

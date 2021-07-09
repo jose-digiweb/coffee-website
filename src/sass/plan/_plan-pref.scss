@@ -1,0 +1,222 @@
+@import '../global';
+@import '../variables';
+
+.plan__section {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+
+  .Plan__navigation {
+    width: 350px;
+    margin-right: 125px;
+    margin-left: calc(165px - 80px);
+
+    @media screen and(max-width: 1420px) {
+      margin-left: 0;
+    }
+
+    @media screen and(max-width:1040px) {
+      display: none;
+    }
+
+    .navigation__link {
+      font-family: $fraunces;
+      font-size: 24px;
+      line-height: 32px;
+      color: rgba(51, 61, 75, 0.4);
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: $gray;
+      }
+
+      :first-child {
+        margin-right: 25px;
+      }
+    }
+
+    .list__item {
+      border-bottom: 1px solid rgba(51, 61, 75, 0.2);
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+    }
+
+    .last {
+      border-bottom: none;
+    }
+  }
+
+  .plan__preferences {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and(max-width:1040px) {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .coffee__preferences {
+      width: 100%;
+      max-width: 730px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .preference__choice {
+      width: 100%;
+      margin-bottom: 88px;
+    }
+
+    .preference__title {
+      width: 100%;
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-size: 40px;
+        line-height: 48px;
+        color: $gray;
+
+        @media screen and(max-width:1040px) {
+          font-size: 32px;
+        }
+
+        @media screen and(max-width:500px) {
+          font-size: 24px;
+          line-height: 28px;
+
+          padding-right: 4rem;
+        }
+      }
+
+      span {
+        font-size: 2rem;
+        color: $darkCyan;
+      }
+    }
+
+    .choices {
+      width: 100%;
+      margin-top: 56px;
+
+      @media screen and(max-width:500px) {
+        margin-top: 32px;
+      }
+
+      .cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        :not(:last-of-type) {
+          margin-right: 24px;
+        }
+
+        @media screen and(max-width:1040px) {
+          :not(:last-of-type) {
+            margin-right: 10px;
+          }
+        }
+
+        @media screen and(max-width:600px) {
+          flex-direction: column;
+          margin-right: 0;
+
+          :not(:last-of-type) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .card__choice {
+        width: 100%;
+        max-width: 228px;
+        padding: 32px 28px 84px 28px;
+        background: #f4f1eb;
+        border-radius: 10px;
+        transition: background 200ms ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          background: $paleOrange;
+        }
+
+        @media screen and(max-width:600px) {
+          width: 100%;
+          max-width: 90%;
+          padding: 24px 25px;
+        }
+
+        @media screen and(max-width:500px) {
+          width: 100%;
+          max-width: 85%;
+          padding: 24px 25px;
+        }
+
+        .card__title {
+          font-size: 22px;
+          line-height: 32px;
+          margin-bottom: 24px;
+
+          @media screen and(max-width:600px) {
+            margin-bottom: 8px;
+          }
+        }
+
+        .card__text {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .order__preview {
+    width: 100%;
+    max-width: 730px;
+    background: $darkGray;
+    border-radius: 10px;
+    padding: 47px 64px;
+    margin-bottom: 40px;
+
+    @media screen and(max-width:1040px) {
+      padding: 27px 44px;
+    }
+
+    h4 {
+      font-family: $barlow;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: $gray;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-family: $fraunces;
+      font-size: 24px;
+      line-height: 40px;
+      color: #ffffff;
+
+      span {
+        color: $darkCyan;
+      }
+    }
+  }
+
+  .btn__plan__container {
+    width: 100%;
+    max-width: 730px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 168px;
+
+    @media screen and(max-width:1040px) {
+      justify-content: center;
+    }
+  }
+}

@@ -13,6 +13,10 @@
     padding: 50px;
   }
 
+  @media screen and(max-width: 500px) {
+    margin-bottom: 120px;
+  }
+
   .process__cards {
     width: auto;
     display: flex;

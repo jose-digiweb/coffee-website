@@ -71,7 +71,6 @@
 
     .preference__title {
       width: 100%;
-      list-style: none;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
@@ -102,10 +101,76 @@
 
     .choices {
       width: 100%;
-      margin-top: 56px;
+      height: 0;
+      overflow: hidden;
+      margin-top: 0;
 
-      @media screen and(max-width:500px) {
-        margin-top: 32px;
+      animation-duration: 500ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+
+      .openPref {
+        @keyframes openPref {
+          from {
+            height: 0;
+            overflow: hidden;
+            margin-top: 0;
+          }
+          to {
+            height: 250px;
+            overflow: visible;
+            margin-top: 56px;
+          }
+        }
+      }
+
+      @media screen and(max-width:600px) {
+        .openPref {
+          @keyframes openPref {
+            from {
+              height: 0;
+              overflow: hidden;
+              margin-top: 0;
+            }
+            to {
+              height: 450px;
+              overflow: visible;
+              margin-top: 32px;
+            }
+          }
+        }
+      }
+
+      .closePref {
+        @keyframes closePref {
+          from {
+            height: 450px;
+            overflow: visible;
+            margin-top: 56px;
+          }
+          to {
+            height: 0;
+            overflow: hidden;
+            margin-top: 0;
+          }
+        }
+      }
+
+      @media screen and(max-width:600px) {
+        .closePref {
+          @keyframes closePref {
+            from {
+              height: 450px;
+              overflow: visible;
+              margin-top: 32px;
+            }
+            to {
+              height: 0;
+              overflow: hidden;
+              margin-top: 0;
+            }
+          }
+        }
       }
 
       .cards {
@@ -147,13 +212,13 @@
 
         @media screen and(max-width:600px) {
           width: 100%;
-          max-width: 90%;
+          max-width: unset;
           padding: 24px 25px;
         }
 
         @media screen and(max-width:500px) {
           width: 100%;
-          max-width: 85%;
+          max-width: unset;
           padding: 24px 25px;
         }
 

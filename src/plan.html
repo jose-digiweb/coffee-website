@@ -186,22 +186,22 @@
 
         <div class="plan__preferences">
           <div class="coffee__preferences">
-            <details class="preference__choice">
-              <summary class="preference__title">
+            <div class="preference__choice">
+              <div class="preference__title choice--1" id="1">
                 <h3>How do you drink your coffee?</h3>
 
-                <span>
+                <span class="arrow">
                   <i class="fas fa-angle-down"></i>
                 </span>
-              </summary>
+              </div>
 
-              <div class="choices">
+              <div class="choices choice--1">
                 <div class="cards">
                   <div class="card__choice">
                     <h4 class="card__title">Capsule</h4>
 
                     <p class="card__text">
-                      Compatible with Nespresso systems and similar brewers
+                      Compatible with Nespresso systems and similar brewers.
                     </p>
                   </div>
 
@@ -210,7 +210,7 @@
 
                     <p class="card__text">
                       For pour over or drip methods like Aeropress, Chemex, and
-                      V60
+                      V60.
                     </p>
                   </div>
 
@@ -219,30 +219,30 @@
 
                     <p class="card__text">
                       Dense and finely ground beans for an intense, flavorful
-                      experience
+                      experience.
                     </p>
                   </div>
                 </div>
               </div>
-            </details>
+            </div>
 
-            <details class="preference__choice">
-              <summary class="preference__title">
+            <div class="preference__choice choice--2">
+              <div class="preference__title" id="2">
                 <h3>What type of coffee?</h3>
 
-                <span>
+                <span class="arrow">
                   <i class="fas fa-angle-down"></i>
                 </span>
-              </summary>
+              </div>
 
-              <div class="choices">
+              <div class="choices choice--2">
                 <div class="cards">
                   <div class="card__choice">
                     <h4 class="card__title">Single origin</h4>
 
                     <p class="card__text">
                       Distinct, high quality coffee from a specific family-owned
-                      farm
+                      farm.
                     </p>
                   </div>
 
@@ -251,7 +251,7 @@
 
                     <p class="card__text">
                       Just like regular coffee, except the caffeine has been
-                      removed
+                      removed.
                     </p>
                   </div>
 
@@ -260,23 +260,23 @@
 
                     <p class="card__text">
                       Combination of two or three dark roasted beans of organic
-                      coffees
+                      coffees.
                     </p>
                   </div>
                 </div>
               </div>
-            </details>
+            </div>
 
-            <details class="preference__choice">
-              <summary class="preference__title">
+            <div class="preference__choice choice--3">
+              <div class="preference__title" id="3">
                 <h3>How much would you like?</h3>
 
-                <span>
+                <span class="arrow">
                   <i class="fas fa-angle-down"></i>
                 </span>
-              </summary>
+              </div>
 
-              <div class="choices">
+              <div class="choices choice--3">
                 <div class="cards">
                   <div class="card__choice">
                     <h4 class="card__title">250g</h4>
@@ -306,24 +306,24 @@
                   </div>
                 </div>
               </div>
-            </details>
+            </div>
 
-            <details class="preference__choice">
-              <summary class="preference__title">
+            <div class="preference__choice choice--4">
+              <div class="preference__title" id="4">
                 <h3>Want us to grind them?</h3>
 
-                <span>
+                <span class="arrow">
                   <i class="fas fa-angle-down"></i>
                 </span>
-              </summary>
+              </div>
 
-              <div class="choices">
+              <div class="choices choice--4">
                 <div class="cards">
                   <div class="card__choice">
                     <h4 class="card__title">Wholebean</h4>
 
                     <p class="card__text">
-                      Best choice if you cherish the full sensory experience
+                      Best choice if you cherish the full sensory experience.
                     </p>
                   </div>
 
@@ -332,7 +332,7 @@
 
                     <p class="card__text">
                       For drip or pour-over coffee methods such as V60 or
-                      Aeropress
+                      Aeropress.
                     </p>
                   </div>
 
@@ -341,25 +341,25 @@
 
                     <p class="card__text">
                       Course ground beans specially suited for french press
-                      coffee
+                      coffee.
                     </p>
                   </div>
                 </div>
               </div>
-            </details>
+            </div>
 
-            <details class="preference__choice">
-              <summary class="preference__title">
+            <div class="preference__choice choice--5">
+              <div class="preference__title" id="5">
                 <h3>How often should we deliver?</h3>
 
-                <span>
+                <span class="arrow">
                   <i class="fas fa-angle-down"></i>
                 </span>
-              </summary>
+              </div>
 
-              <div class="choices">
+              <div class="choices choice--5">
                 <div class="cards">
-                  <div class="card__choice">
+                  <div class="card__choice" data-choice="1">
                     <h4 class="card__title">Every week</h4>
 
                     <p class="card__text">
@@ -367,7 +367,7 @@
                     </p>
                   </div>
 
-                  <div class="card__choice">
+                  <div class="card__choice" data-choice="2">
                     <h4 class="card__title">Every 2 weeks</h4>
 
                     <p class="card__text">
@@ -375,7 +375,7 @@
                     </p>
                   </div>
 
-                  <div class="card__choice">
+                  <div class="card__choice" data-choice="3">
                     <h4 class="card__title">Every month</h4>
 
                     <p class="card__text">
@@ -384,14 +384,17 @@
                   </div>
                 </div>
               </div>
-            </details>
+            </div>
           </div>
 
           <div class="order__preview">
             <h4>ORDER SUMMARY</h4>
             <p>
-              “I drink my coffee using <span>Capsules</span>, with a _____ type
-              of bean. _____, sent to me _____.”
+              “I drink my coffee using <span class="option--1">_____</span>,
+              with a <span class="option--2">_____</span> type of bean.
+              <span class="option--3">_____</span> ground ala
+              <span class="option--4">_____</span>, sent to me
+              <span class="option--5">_____</span>.”
             </p>
           </div>
 

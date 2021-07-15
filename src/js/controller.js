@@ -7,16 +7,14 @@ import mobileMenuView from './views/mobileMenuView';
 
 const PreferenceSlide = function () {
   const prefTitle = document.querySelectorAll('.preference__title');
+  const prev = document.querySelector('.order__preview');
 
   prefTitle.forEach((pref) => {
+    const choice = pref.nextElementSibling;
+    const arrow = pref.lastElementChild;
+    const cards = choice.firstElementChild.children;
+
     pref.addEventListener('click', function (e) {
-      const id = pref.getAttribute('id');
-      const choice = pref.nextElementSibling;
-      const arrow = pref.lastElementChild;
-      const prev = document.querySelector('.order__preview');
-
-      // console.log(choice);
-
       if (choice.classList.contains('openPref')) {
         choice.classList.remove('openPref');
         choice.style.animationName = 'closePref';
@@ -26,6 +24,18 @@ const PreferenceSlide = function () {
         choice.style.animationName = 'openPref';
         arrow.style.transform = 'rotate(180deg)';
       }
+    });
+
+    cards.forEach((card) => {
+      const choice = card.firstElementChild;
+
+      card.addEventListener('click', function (e) {
+        const tittle = choice.textContent;
+        const data = card.getAttribute('data-choice');
+        let prev = document.querySelector(`.option--${data}`);
+
+        prev.textContent = tittle;
+      });
     });
   });
 };

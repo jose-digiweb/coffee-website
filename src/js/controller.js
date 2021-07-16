@@ -14,27 +14,53 @@ const PreferenceSlide = function () {
     const arrow = pref.lastElementChild;
     const cards = choice.firstElementChild.children;
 
+    const slideDow = function () {
+      choice.classList.add('openPref');
+      choice.style.animationName = 'openPref';
+      arrow.style.transform = 'rotate(180deg)';
+    };
+
+    const slideUp = function () {
+      choice.classList.remove('openPref');
+      choice.style.animationName = 'closePref';
+      arrow.style.transform = 'rotate(0deg)';
+    };
+
     pref.addEventListener('click', function (e) {
       if (choice.classList.contains('openPref')) {
-        choice.classList.remove('openPref');
-        choice.style.animationName = 'closePref';
-        arrow.style.transform = 'rotate(0deg)';
+        slideUp();
       } else {
-        choice.classList.add('openPref');
-        choice.style.animationName = 'openPref';
-        arrow.style.transform = 'rotate(180deg)';
+        slideDow();
       }
     });
 
     cards.forEach((card) => {
       const choice = card.firstElementChild;
+      const grindEl = document.querySelector('.grind');
 
       card.addEventListener('click', function (e) {
         const tittle = choice.textContent;
         const data = card.getAttribute('data-choice');
         let prev = document.querySelector(`.option--${data}`);
 
+        //--> Updating the Oder Preview
         prev.textContent = tittle;
+        choice.parentElement.classList.toggle('active--Card');
+
+        if (
+          choice.parentElement.classList.contains('capsule') &&
+          choice.parentElement.classList.contains('active--Card')
+        ) {
+          grindEl.classList.add('closePref');
+          grindEl.style.opacity = '0.2';
+        }
+        if (
+          !choice.parentElement.classList.contains('capsule') &&
+          !choice.parentElement.classList.contains('active--Card')
+        ) {
+          grindEl.classList.remove('closePref');
+          grindEl.style.opacity = '1';
+        }
       });
     });
   });

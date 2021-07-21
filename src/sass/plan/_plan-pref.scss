@@ -20,6 +20,11 @@
       display: none;
     }
 
+    .navigation__list {
+      position: sticky;
+      top: 2rem;
+    }
+
     .navigation__link {
       font-family: $fraunces;
       font-size: 24px;
@@ -33,6 +38,14 @@
 
       :first-child {
         margin-right: 25px;
+      }
+    }
+
+    .nav--active {
+      color: rgb(78, 78, 78);
+
+      :first-child {
+        color: $darkCyan;
       }
     }
 
@@ -68,6 +81,10 @@
       width: 100%;
       margin-bottom: 88px;
     }
+
+    // .preference__choice:target {
+    //   outline: red;
+    // }
 
     .preference__title {
       width: 100%;
@@ -267,7 +284,7 @@
       line-height: 40px;
       color: #ffffff;
 
-      span {
+      .options {
         color: $darkCyan;
       }
     }

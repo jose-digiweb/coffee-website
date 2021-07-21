@@ -3,6 +3,8 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
 }
 
 *,
@@ -36,7 +38,6 @@ body {
   line-height: 26px;
   background-color: $lightCream;
   padding: 0 5em;
-  scroll-behavior: smooth;
 }
 
 .body {
@@ -50,7 +51,6 @@ body {
   line-height: 26px;
   background-color: $lightCream;
   padding: 0 5em;
-  scroll-behavior: smooth;
 
   @media screen and(max-width: 1200px) {
     padding: 0 40px;
@@ -109,6 +109,10 @@ p {
   padding: 0;
 }
 
+button {
+  border: none;
+}
+
 .btn__primary {
   width: 217px;
   height: 56px;
@@ -129,13 +133,27 @@ p {
   }
 }
 
+.btn__order {
+  width: 217px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $darkCyan;
+  border-radius: 5px;
+  color: $lightCream;
+  font-family: $fraunces;
+  font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    background: $btnHover;
+  }
+}
+
 .btn__disable {
   background: $btnDisabled;
-  cursor: alias;
-
-  :first-child {
-    cursor: alias;
-  }
+  cursor: unset;
 
   &:hover {
     background: $btnDisabled;

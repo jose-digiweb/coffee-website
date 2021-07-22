@@ -15,8 +15,6 @@ const PreferenceSlide = function () {
   const capsule = document.querySelector('.capsule');
   const grindNav = document.querySelector('.nav--4');
 
-  console.log(prev.lastElementChild.children);
-
   prefTitle.forEach((pref) => {
     const choice = pref.nextElementSibling;
     const arrow = pref.lastElementChild;
@@ -60,12 +58,16 @@ const PreferenceSlide = function () {
         const arrow = grindEl.firstElementChild.children[1];
         let prev = document.querySelector(`.option--${data}`);
 
-        //--> Updating the Order Preview
-        if (prev.textContent === '_____') prev.textContent = tittle;
-        else if (prev.textContent === tittle) prev.textContent = '_____';
-        choice.parentElement.classList.toggle('active--Card');
+        //--> Updating the Order Preview and The active Class
+        if (prev.textContent === '_____') {
+          prev.textContent = tittle;
+          choice.parentElement.classList.toggle('active--Card');
+        } else if (prev.textContent === tittle) {
+          prev.textContent = '_____';
+          choice.parentElement.classList.toggle('active--Card');
+        }
 
-        //--> Controlling the Grind Preference
+        //--> Controlling the Grind/Capsule Preference
         if (capsule.classList.contains('active--Card')) {
           grindSec.classList.add('disable');
 

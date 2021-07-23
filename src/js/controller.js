@@ -7,13 +7,15 @@ import mobileMenuView from './views/mobileMenuView';
 
 const PreferenceSlide = function () {
   const prefTitle = document.querySelectorAll('.preference__title');
-  const prefChoice = document.querySelectorAll('.preference__choice');
-  const prev = document.querySelector('.order__preview');
   const grindEl = document.querySelector('.grind');
   const grindPrev = document.querySelector('.grind--Preview');
   const grindSpace = document.querySelector('.option--4');
   const capsule = document.querySelector('.capsule');
   const grindNav = document.querySelector('.nav--4');
+  const priceWeekly = document.querySelector('.price__weekly');
+  const priceBiWeekly = document.querySelector('.price__biweekly');
+  const priceMonthly = document.querySelector('.price__monthly');
+  const prevText = document.querySelector('.preview__text');
 
   prefTitle.forEach((pref) => {
     const choice = pref.nextElementSibling;
@@ -50,25 +52,42 @@ const PreferenceSlide = function () {
     //--> Controlling the choices and coffee preferences
     cards.forEach((card) => {
       const choice = card.firstElementChild;
+      const tittle = choice.textContent;
+      const data = card.getAttribute('data-choice');
+      const grindSec = grindEl.lastElementChild;
+      const arrow = grindEl.firstElementChild.children[1];
+      let orderPrev = document.querySelector(`.option--${data}`);
+
+      // console.log(orderPrev.parentElement.textContent);
 
       card.addEventListener('click', function (e) {
-        const tittle = choice.textContent;
-        const data = card.getAttribute('data-choice');
-        const grindSec = grindEl.lastElementChild;
-        const arrow = grindEl.firstElementChild.children[1];
-        let prev = document.querySelector(`.option--${data}`);
-
         //--> Updating the Order Preview and The active Class
-        if (prev.textContent === '_____') {
-          prev.textContent = tittle;
+        if (orderPrev.textContent === '_____') {
+          orderPrev.textContent = tittle;
           choice.parentElement.classList.toggle('active--Card');
-        } else if (prev.textContent === tittle) {
-          prev.textContent = '_____';
+        } else if (orderPrev.textContent === tittle) {
+          orderPrev.textContent = '_____';
           choice.parentElement.classList.toggle('active--Card');
         }
 
-        //--> Controlling the Grind/Capsule Preference
+        //--> Updating the Subscription Price
+        if (orderPrev.textContent === '250g') {
+          priceWeekly.textContent = '$7.20';
+          priceBiWeekly.textContent = '$9.60';
+          priceMonthly.textContent = '$12.00';
+        }
+        if (orderPrev.textContent === '500g') {
+          priceWeekly.textContent = '$13.00';
+          priceBiWeekly.textContent = '$17.50';
+          priceMonthly.textContent = '$22.00';
+        } else if (orderPrev.textContent === '1000g') {
+          priceWeekly.textContent = '$22.00';
+          priceBiWeekly.textContent = '$32.00';
+          priceMonthly.textContent = '$42.00';
+        }
+
         if (capsule.classList.contains('active--Card')) {
+          //--> Controlling the Grind/Capsule Preference
           grindSec.classList.add('disable');
 
           //--> Slide Up the Section
@@ -80,6 +99,8 @@ const PreferenceSlide = function () {
           grindNav.style.opacity = '0.2';
 
           //--> Updating the Preview Text
+          console.log(grindPrev.textContent);
+          console.log(grindSpace.textContent);
           grindPrev.style.display = 'none';
           grindSpace.style.display = 'none';
         } else if (!capsule.classList.contains('active--Card')) {

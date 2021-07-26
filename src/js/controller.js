@@ -16,12 +16,13 @@ const PreferenceSlide = function () {
   const priceBiWeekly = document.querySelector('.price__biweekly');
   const priceMonthly = document.querySelector('.price__monthly');
   const prevText = document.querySelector('.preview__text');
+  const btnOrder = document.querySelector('.btn__order');
 
-  prefTitle.forEach((pref) => {
-    const choice = pref.nextElementSibling;
-    const arrow = pref.lastElementChild;
+  prefTitle.forEach((tittlePref) => {
+    const choice = tittlePref.nextElementSibling;
+    const arrow = tittlePref.lastElementChild;
     const cards = choice.firstElementChild.children;
-    let id = pref.parentElement.getAttribute('id');
+    let id = tittlePref.parentElement.getAttribute('id');
     const navigation = document.querySelector(`.nav--${id}`);
 
     const slideDow = function () {
@@ -41,7 +42,7 @@ const PreferenceSlide = function () {
     };
 
     //--> Slide Up and Down the Preferences Tab
-    [navigation, pref].forEach((el) => {
+    [navigation, tittlePref].forEach((el) => {
       el.addEventListener('click', function (e) {
         if (choice.classList.contains('disable')) return;
         if (choice.classList.contains('closePref')) slideDow();
@@ -57,8 +58,6 @@ const PreferenceSlide = function () {
       const grindSec = grindEl.lastElementChild;
       const arrow = grindEl.firstElementChild.children[1];
       let orderPrev = document.querySelector(`.option--${data}`);
-
-      // console.log(orderPrev.parentElement.textContent);
 
       card.addEventListener('click', function (e) {
         //--> Updating the Order Preview and The active Class
@@ -99,8 +98,6 @@ const PreferenceSlide = function () {
           grindNav.style.opacity = '0.2';
 
           //--> Updating the Preview Text
-          console.log(grindPrev.textContent);
-          console.log(grindSpace.textContent);
           grindPrev.style.display = 'none';
           grindSpace.style.display = 'none';
         } else if (!capsule.classList.contains('active--Card')) {
@@ -110,24 +107,22 @@ const PreferenceSlide = function () {
           grindEl.style.opacity = '1';
           grindNav.style.opacity = '1';
         }
+
+        // console.log(orderPrev.parentElement.innerText);
+        if (!orderPrev.parentElement.innerText.includes('_____')) {
+          btnOrder.classList.remove('btn__disable');
+        } else if (orderPrev.parentElement.innerText.includes('_____')) {
+          btnOrder.classList.add('btn__disable');
+        }
       });
     });
   });
 };
 
-const renderMessage = function () {
-  const body = document.querySelector('.plan__body');
-
-  const ht = '<div class="append"><h1>Page in construction</h1></div>';
-
-  body.insertAdjacentHTML('afterbegin', ht);
-};
-
-const controlMobileMenu = function () {
+const controlPlanSec = function () {
   mobileMenuView.mobileMenuHandler();
   mobileMenuView.openMenuHandler();
   mobileMenuView.closeMenuHandler();
   PreferenceSlide();
-  renderMessage();
 };
-controlMobileMenu();
+controlPlanSec();

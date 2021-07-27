@@ -1,0 +1,66 @@
+@import '../global';
+@import '../variables';
+
+.modal__Checkout {
+  position: absolute;
+  width: 100%;
+  max-width: 540px;
+  border-radius: 10px;
+  z-index: 5;
+  display: none;
+
+  .modal__tittle {
+    background: $darkGray;
+    padding: 48px 0 40px 56px;
+
+    h3 {
+      font-size: 40px;
+      line-height: 48px;
+      color: #ffffff;
+    }
+  }
+
+  .modal__content {
+    padding: 56px;
+    background: $lightCream;
+  }
+
+  .modal__text {
+    margin-bottom: 47px;
+
+    .modal__preview {
+      font-family: $fraunces;
+      font-size: 23px;
+      line-height: 40px;
+      margin-bottom: 7px;
+    }
+
+    .disclaimer {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  .checkout__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .modal__Price {
+    font-family: $fraunces;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+  display: none;
+}

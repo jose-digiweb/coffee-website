@@ -16,7 +16,9 @@ const PreferenceSlide = function () {
   const priceBiWeekly = document.querySelector('.price__biweekly');
   const priceMonthly = document.querySelector('.price__monthly');
   const prevText = document.querySelector('.preview__text');
-  const btnOrder = document.querySelector('.btn__order');
+  const btnOrder = document.querySelector('#btn--plan');
+  const modal = document.querySelector('.modal__Checkout');
+  const overlay = document.querySelector('.overlay');
 
   prefTitle.forEach((tittlePref) => {
     const choice = tittlePref.nextElementSibling;
@@ -111,11 +113,31 @@ const PreferenceSlide = function () {
         // console.log(orderPrev.parentElement.innerText);
         if (!orderPrev.parentElement.innerText.includes('_____')) {
           btnOrder.classList.remove('btn__disable');
+          btnOrder.disabled = false;
         } else if (orderPrev.parentElement.innerText.includes('_____')) {
           btnOrder.classList.add('btn__disable');
+          btnOrder.disabled = true;
         }
       });
     });
+  });
+
+  btnOrder.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    overlay.style.display = 'block';
+    modal.style.display = 'block';
+
+    document.documentElement.scrollTop = 0;
+    document.documentElement.style.overflow = 'hidden';
+  });
+
+  overlay.addEventListener('click', function () {
+    overlay.style.display = 'none';
+    modal.style.display = 'none';
+
+    document.documentElement.scrollTop = false;
+    document.documentElement.style.overflow = 'scroll';
   });
 };
 

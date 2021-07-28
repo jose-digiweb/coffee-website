@@ -8,8 +8,7 @@ import mobileMenuView from './views/mobileMenuView';
 const PreferenceSlide = function () {
   const prefTitle = document.querySelectorAll('.preference__title');
   const grindEl = document.querySelector('.grind');
-  const grindPrev = document.querySelector('.grind--Preview');
-  const grindSpace = document.querySelector('.option--4');
+  const grindPrev = document.querySelectorAll('.grind--Preview');
   const capsule = document.querySelector('.capsule');
   const grindNav = document.querySelector('.nav--4');
   const priceWeekly = document.querySelector('.price__weekly');
@@ -19,6 +18,11 @@ const PreferenceSlide = function () {
   const btnOrder = document.querySelector('#btn--plan');
   const modal = document.querySelector('.modal__Checkout');
   const overlay = document.querySelector('.overlay');
+  const modalPreview = document.querySelector('.modal__preview');
+  const modalPrice = document.querySelector('#checkout__price');
+  const weeklyChoice = document.querySelector('.weekly');
+  const biWeeklyChoice = document.querySelector('.biweekly');
+  const monthlyChoice = document.querySelector('.monthly');
 
   prefTitle.forEach((tittlePref) => {
     const choice = tittlePref.nextElementSibling;
@@ -59,36 +63,46 @@ const PreferenceSlide = function () {
       const data = card.getAttribute('data-choice');
       const grindSec = grindEl.lastElementChild;
       const arrow = grindEl.firstElementChild.children[1];
-      let orderPrev = document.querySelector(`.option--${data}`);
+      let orderPrev = document.querySelectorAll(`.option--${data}`);
 
       card.addEventListener('click', function (e) {
         //--> Updating the Order Preview and The active Class
-        if (orderPrev.textContent === '_____') {
-          orderPrev.textContent = tittle;
-          choice.parentElement.classList.toggle('active--Card');
-        } else if (orderPrev.textContent === tittle) {
-          orderPrev.textContent = '_____';
-          choice.parentElement.classList.toggle('active--Card');
-        }
+        orderPrev.forEach((prev) => {
+          if (prev.textContent === '_____') {
+            prev.textContent = tittle;
+            choice.parentElement.classList.add('active--Card');
+          } else if (prev.textContent === tittle) {
+            prev.textContent = '_____';
+            choice.parentElement.classList.remove('active--Card');
+          }
 
-        //--> Updating the Subscription Price
-        if (orderPrev.textContent === '250g') {
-          priceWeekly.textContent = '$7.20';
-          priceBiWeekly.textContent = '$9.60';
-          priceMonthly.textContent = '$12.00';
-        }
-        if (orderPrev.textContent === '500g') {
-          priceWeekly.textContent = '$13.00';
-          priceBiWeekly.textContent = '$17.50';
-          priceMonthly.textContent = '$22.00';
-        } else if (orderPrev.textContent === '1000g') {
-          priceWeekly.textContent = '$22.00';
-          priceBiWeekly.textContent = '$32.00';
-          priceMonthly.textContent = '$42.00';
-        }
+          //--> Updating the Subscription Price
+          if (prev.textContent === '250g') {
+            priceWeekly.textContent = '7.20';
+            priceBiWeekly.textContent = '9.60';
+            priceMonthly.textContent = '12.00';
+          }
+          if (prev.textContent === '500g') {
+            priceWeekly.textContent = '13.00';
+            priceBiWeekly.textContent = '17.50';
+            priceMonthly.textContent = '22.00';
+          } else if (prev.textContent === '1000g') {
+            priceWeekly.textContent = '22.00';
+            priceBiWeekly.textContent = '32.00';
+            priceMonthly.textContent = '42.00';
+          }
+        });
 
+        //--> Updating the the Modal Checkout Value
+        if (weeklyChoice.parentElement.classList.contains('active--Card'))
+          modalPrice.textContent = priceWeekly.textContent * 4;
+        if (biWeeklyChoice.parentElement.classList.contains('active--Card'))
+          modalPrice.textContent = priceBiWeekly.textContent * 2;
+        else if (monthlyChoice.parentElement.classList.contains('active--Card'))
+          modalPrice.textContent = priceMonthly.textContent;
+
+        //--> Controlling the Grind/Capsule Preference
         if (capsule.classList.contains('active--Card')) {
-          //--> Controlling the Grind/Capsule Preference
           grindSec.classList.add('disable');
 
           //--> Slide Up the Section
@@ -100,21 +114,22 @@ const PreferenceSlide = function () {
           grindNav.style.opacity = '0.2';
 
           //--> Updating the Preview Text
-          grindPrev.style.display = 'none';
-          grindSpace.style.display = 'none';
+          grindPrev.forEach((prev) => {
+            prev.style.display = 'none';
+          });
         } else if (!capsule.classList.contains('active--Card')) {
           grindSec.classList.remove('disable');
-          grindPrev.style.display = 'inline-block';
-          grindSpace.style.display = 'inline-block';
+          grindPrev.forEach((prev) => {
+            prev.style.display = 'inline-block';
+          });
           grindEl.style.opacity = '1';
           grindNav.style.opacity = '1';
         }
 
-        // console.log(orderPrev.parentElement.innerText);
-        if (!orderPrev.parentElement.innerText.includes('_____')) {
+        if (!prevText.innerText.includes('_____')) {
           btnOrder.classList.remove('btn__disable');
           btnOrder.disabled = false;
-        } else if (orderPrev.parentElement.innerText.includes('_____')) {
+        } else if (prevText.innerText.includes('_____')) {
           btnOrder.classList.add('btn__disable');
           btnOrder.disabled = true;
         }

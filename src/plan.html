@@ -72,9 +72,15 @@
         <div class="modal__content">
           <div class="modal__text">
             <p class="modal__preview">
-              “I drink my coffee using Filter, with a Decaf type of bean. 250g
-              ground ala Cafetiére, sent to me Every week.”
+              “I drink my coffee using
+              <span class="option--1 options">_____</span>, with a
+              <span class="option--2 options">_____</span> type of bean.
+              <span class="option--3 options">_____</span>
+              <span class="grind--Preview"
+                >ground ala <span class="option--4 options">_____</span></span
+              >, sent to me <span class="option--5 options">_____</span>.”
             </p>
+
             <p class="disclaimer">
               Is this correct? You can proceed to checkout or go back to plan
               selection if something is off. Subscription discount codes can
@@ -83,7 +89,9 @@
           </div>
 
           <div class="checkout__price">
-            <div class="modal__Price"><span>$14.00</span>/ mo</div>
+            <div class="modal__Price">
+              <span id="checkout__price">$14.00</span>/ mo
+            </div>
             <button type="button" class="btn__order" id="btn--modal">
               Checkout
             </button>
@@ -387,7 +395,7 @@
               <div class="choices closePref">
                 <div class="cards">
                   <div class="card__choice" data-choice="5">
-                    <h4 class="card__title">Every week</h4>
+                    <h4 class="card__title weekly">Every week</h4>
 
                     <p class="card__text">
                       <span class="price__weekly">$</span>
@@ -396,7 +404,7 @@
                   </div>
 
                   <div class="card__choice" data-choice="5">
-                    <h4 class="card__title">Every 2 weeks</h4>
+                    <h4 class="card__title biweekly">Every 2 weeks</h4>
 
                     <p class="card__text">
                       <span class="price__biweekly">$</span>
@@ -405,7 +413,7 @@
                   </div>
 
                   <div class="card__choice" data-choice="5">
-                    <h4 class="card__title">Every month</h4>
+                    <h4 class="card__title monthly">Every month</h4>
 
                     <p class="card__text">
                       <span class="price__monthly">$</span>
@@ -424,9 +432,9 @@
               <span class="option--1 options">_____</span>, with a
               <span class="option--2 options">_____</span> type of bean.
               <span class="option--3 options">_____</span>
-              <span class="grind--Preview">ground ala</span>
-              <span class="option--4 options">_____</span>, sent to me
-              <span class="option--5 options">_____</span>.”
+              <span class="grind--Preview"
+                >ground ala <span class="option--4 options">_____</span> </span
+              >, sent to me <span class="option--5 options">_____</span>.”
             </p>
           </div>
 

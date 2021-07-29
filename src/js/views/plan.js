@@ -3,31 +3,38 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 //--> Importing modules
-import mobileMenuView from './views/mobileMenuView';
+import mobileMenuView from './mobileMenuView.js';
 
-const PreferenceSlide = function () {
+const planSectionControl = function () {
   const prefTitle = document.querySelectorAll('.preference__title');
+  const prevText = document.querySelector('.preview__text');
   const grindEl = document.querySelector('.grind');
   const grindPrev = document.querySelectorAll('.grind--Preview');
-  const capsule = document.querySelector('.capsule');
   const grindNav = document.querySelector('.nav--4');
+  const capsule = document.querySelector('.capsule');
+
+  //--> Modal
+  const overlay = document.querySelector('.overlay');
+  const modal = document.querySelector('.modal__Checkout');
+  const btnOrder = document.querySelector('#btn--plan');
+  const btnModalMobile = document.querySelector('.btn--mobile');
+  const btnModal = document.querySelector('#btn--modal');
+  const modalPrice = document.querySelectorAll('#checkout__price');
+  const modalPriceContainer = document.querySelector('.modal__Price');
+
+  //--> Prices
   const priceWeekly = document.querySelector('.price__weekly');
   const priceBiWeekly = document.querySelector('.price__biweekly');
   const priceMonthly = document.querySelector('.price__monthly');
-  const prevText = document.querySelector('.preview__text');
-  const btnOrder = document.querySelector('#btn--plan');
-  const modal = document.querySelector('.modal__Checkout');
-  const overlay = document.querySelector('.overlay');
-  const modalPreview = document.querySelector('.modal__preview');
-  const modalPrice = document.querySelector('#checkout__price');
   const weeklyChoice = document.querySelector('.weekly');
   const biWeeklyChoice = document.querySelector('.biweekly');
   const monthlyChoice = document.querySelector('.monthly');
 
   prefTitle.forEach((tittlePref) => {
-    const choice = tittlePref.nextElementSibling;
-    const arrow = tittlePref.lastElementChild;
-    const cards = choice.firstElementChild.children;
+    // console.log(tittlePref);
+    const choice = tittlePref.nextElementSibling; //--> Preferences Tittle(h3)
+    const arrow = tittlePref.lastElementChild; //--> Arrow Icon
+    const cards = choice.firstElementChild.children; //--> Preferences Cards
     let id = tittlePref.parentElement.getAttribute('id');
     const navigation = document.querySelector(`.nav--${id}`);
 
@@ -58,8 +65,8 @@ const PreferenceSlide = function () {
 
     //--> Controlling the choices and coffee preferences
     cards.forEach((card) => {
-      const choice = card.firstElementChild;
-      const tittle = choice.textContent;
+      const coffeeChoice = card.firstElementChild;
+      const tittle = coffeeChoice.textContent;
       const data = card.getAttribute('data-choice');
       const grindSec = grindEl.lastElementChild;
       const arrow = grindEl.firstElementChild.children[1];
@@ -70,13 +77,14 @@ const PreferenceSlide = function () {
         orderPrev.forEach((prev) => {
           if (prev.textContent === '_____') {
             prev.textContent = tittle;
-            choice.parentElement.classList.add('active--Card');
+            coffeeChoice.parentElement.classList.add('active--Card');
           } else if (prev.textContent === tittle) {
             prev.textContent = '_____';
-            choice.parentElement.classList.remove('active--Card');
+            coffeeChoice.parentElement.classList.remove('active--Card');
           }
 
           //--> Updating the Subscription Price
+
           if (prev.textContent === '250g') {
             priceWeekly.textContent = '7.20';
             priceBiWeekly.textContent = '9.60';
@@ -93,13 +101,17 @@ const PreferenceSlide = function () {
           }
         });
 
-        //--> Updating the the Modal Checkout Value
-        if (weeklyChoice.parentElement.classList.contains('active--Card'))
-          modalPrice.textContent = priceWeekly.textContent * 4;
-        if (biWeeklyChoice.parentElement.classList.contains('active--Card'))
-          modalPrice.textContent = priceBiWeekly.textContent * 2;
-        else if (monthlyChoice.parentElement.classList.contains('active--Card'))
-          modalPrice.textContent = priceMonthly.textContent;
+        modalPrice.forEach((price) => {
+          //--> Updating the the Modal Checkout Value
+          if (weeklyChoice.parentElement.classList.contains('active--Card'))
+            price.textContent = priceWeekly.textContent * 4;
+          if (biWeeklyChoice.parentElement.classList.contains('active--Card'))
+            price.textContent = priceBiWeekly.textContent * 2;
+          else if (
+            monthlyChoice.parentElement.classList.contains('active--Card')
+          )
+            price.textContent = priceMonthly.textContent;
+        });
 
         //--> Controlling the Grind/Capsule Preference
         if (capsule.classList.contains('active--Card')) {
@@ -137,6 +149,23 @@ const PreferenceSlide = function () {
     });
   });
 
+  //--> Responsive Checkout Price and Button
+  ['load', 'resize'].forEach((ev) => {
+    window.addEventListener(ev, function () {
+      if (window.innerWidth < 585) {
+        modalPriceContainer.style.display = 'none';
+        btnModal.style.display = 'none';
+        btnModalMobile.style.display = 'block';
+        btnModalMobile.style.width = '100%';
+      } else if (window.innerWidth >= 585) {
+        modalPriceContainer.style.display = 'block';
+        btnModal.style.display = 'block';
+        btnModalMobile.style.display = 'none';
+        btnModalMobile.style.width = '';
+      }
+    });
+  });
+
   btnOrder.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -156,10 +185,10 @@ const PreferenceSlide = function () {
   });
 };
 
-const controlPlanSec = function () {
+const init = function () {
   mobileMenuView.mobileMenuHandler();
   mobileMenuView.openMenuHandler();
   mobileMenuView.closeMenuHandler();
-  PreferenceSlide();
+  planSectionControl();
 };
-controlPlanSec();
+init();

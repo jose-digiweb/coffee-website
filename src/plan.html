@@ -31,7 +31,7 @@
     <title>Frontend Mentor | Coffeeroasters subscription site</title>
 
     <!--JavaScript File Link-->
-    <script defer src="./js/controller.js"></script>
+    <script defer src="./js/views/plan.js"></script>
   </head>
 
   <body class="body plan__body">
@@ -48,7 +48,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="./about.html">About us</a></li>
-          <li><a href="./coming.html">Create your plan</a></li>
+          <li><a href="./plan.html">Create your plan</a></li>
         </ul>
       </nav>
 
@@ -90,10 +90,18 @@
 
           <div class="checkout__price">
             <div class="modal__Price">
-              <span id="checkout__price">$14.00</span>/ mo
+              $<span id="checkout__price">14.00</span>/ mo
             </div>
             <button type="button" class="btn__order" id="btn--modal">
               Checkout
+            </button>
+
+            <button
+              type="button"
+              class="btn__order btn--mobile"
+              id="btn--modal"
+            >
+              Checkout - $<span id="checkout__price">14.00</span>/ mo
             </button>
           </div>
         </div>
@@ -464,7 +472,7 @@
           <div class="nav__footer">
             <a href="/">Home</a>
             <a href="./about.html">About</a>
-            <a href="./coming.html">Create your plan</a>
+            <a href="./plan.html">Create your plan</a>
           </div>
         </div>
 

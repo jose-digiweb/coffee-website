@@ -5,34 +5,73 @@
   position: absolute;
   width: 100%;
   max-width: 540px;
-  border-radius: 10px;
+
   z-index: 5;
   display: none;
+
+  @media screen and(max-width: 630px) {
+    max-width: 90%;
+  }
 
   .modal__tittle {
     background: $darkGray;
     padding: 48px 0 40px 56px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @media screen and(max-width: 490px) {
+      padding: 28px 0 24px 24px;
+    }
 
     h3 {
       font-size: 40px;
       line-height: 48px;
       color: #ffffff;
+
+      @media screen and(max-width: 435px) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      @media screen and(max-width: 360px) {
+        font-size: 25px;
+        line-height: 10px;
+      }
     }
   }
 
   .modal__content {
     padding: 56px;
     background: $lightCream;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @media screen and(max-width: 435px) {
+      padding: 40px 24px 24px 24px;
+    }
+
+    @media screen and(max-width: 360px) {
+      padding: 24px 24px 24px 24px;
+    }
   }
 
   .modal__text {
     margin-bottom: 47px;
+
+    @media screen and(max-width: 435px) {
+      margin-bottom: 24px;
+    }
 
     .modal__preview {
       font-family: $fraunces;
       font-size: 23px;
       line-height: 40px;
       margin-bottom: 7px;
+
+      @media screen and(max-width: 360px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
 
       .options {
         color: $darkCyan;
@@ -55,6 +94,10 @@
     font-family: $fraunces;
     font-size: 32px;
     line-height: 36px;
+  }
+
+  .btn--mobile {
+    display: none;
   }
 }
 

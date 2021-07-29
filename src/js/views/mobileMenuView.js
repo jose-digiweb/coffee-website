@@ -3,9 +3,9 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 //--> Configuration and Helper files
-import { BREAK_POINT } from '../config';
+import { BREAK_POINT } from '../config.js';
 
-import { menuState } from '../helper';
+import { menuState } from '../helper.js';
 
 class MobileMenuView {
   _openBtn = document.querySelector('.mobile__open');

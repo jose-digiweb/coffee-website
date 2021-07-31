@@ -1,10 +1,9 @@
-@import './variables';
-@import './global';
-@import './about/about-global';
+@import './global/variables';
+@import './global/global';
 
-@import './header';
+@import './global/header';
 @import './about/about-hero';
 @import './about/commitment';
 @import './about/quality';
 @import './about/headquarters';
-@import './footer';
+@import './global/footer';

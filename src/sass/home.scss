@@ -1,9 +1,9 @@
-@import './global';
-@import './variables';
+@import './global/global';
+@import './global/variables';
 
-@import './header';
+@import './global/header';
 @import './home/hero';
 @import './home/collection';
 @import './home/why';
 @import './home/how';
-@import './footer';
+@import './global/footer';

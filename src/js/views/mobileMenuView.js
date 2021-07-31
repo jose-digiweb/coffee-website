@@ -3,8 +3,6 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 //--> Configuration and Helper files
-import { BREAK_POINT } from '../config.js';
-
 import { menuState } from '../helper.js';
 
 class MobileMenuView {
@@ -35,17 +33,17 @@ class MobileMenuView {
     }, 1000);
   }
 
-  mobileMenuHandler() {
+  mobileMenuBtn() {
     ['load', 'resize'].forEach((ev) => {
       window.addEventListener(ev, this._controlMobileMenu.bind(this));
     });
   }
 
-  openMenuHandler() {
+  openMenu() {
     this._openBtn.addEventListener('click', this._menuOpenState.bind(this));
   }
 
-  closeMenuHandler() {
+  closeMenu() {
     this._closeBtn.addEventListener('click', this._menuCloseState.bind(this));
   }
 }

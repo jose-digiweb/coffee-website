@@ -24,46 +24,57 @@ class PlanSubscription {
   biWeeklyChoice = document.querySelector('.biweekly');
   monthlyChoice = document.querySelector('.monthly');
 
-  slidePreference() {
-    this.prefTitle.forEach((tittlePref) => {
-      const choice = tittlePref.nextElementSibling; //--> Preferences Tittle(h3)
-      const arrow = tittlePref.lastElementChild; //--> Arrow Icon
-      const cards = choice.firstElementChild.children; //--> Preferences Cards
-      let id = tittlePref.parentElement.getAttribute('id');
-      const navigation = document.querySelector(`.nav--${id}`);
+  slideDow(choice, arrow, navTittle) {
+    choice.classList.remove('closePref');
+    choice.classList.add('openPref');
+    choice.style.animationName = 'openPref';
+    arrow.style.transform = 'rotate(180deg)';
+    navTittle.classList.add('nav--active');
+  }
 
-      const slideDow = function () {
-        choice.classList.remove('closePref');
-        choice.classList.add('openPref');
-        choice.style.animationName = 'openPref';
-        arrow.style.transform = 'rotate(180deg)';
-        navigation.classList.add('nav--active');
-      };
+  slideUp(choice, arrow, navTittle) {
+    choice.classList.remove('openPref');
+    choice.classList.add('closePref');
+    choice.style.animationName = 'closePref';
+    arrow.style.transform = 'rotate(0)';
+    navTittle.classList.remove('nav--active');
+  }
 
-      const slideUp = function () {
-        choice.classList.remove('openPref');
-        choice.classList.add('closePref');
-        navigation.classList.remove('nav--active');
-        choice.style.animationName = 'closePref';
-        arrow.style.transform = 'rotate(0deg)';
-      };
+  GrindSectionDisabled(grindSection, tittle, navTittle, arrow) {
+    grindSection.classList.add('disabled');
+    grindSection.classList.remove('openPref');
+    grindSection.classList.add('closePref');
+    grindSection.style.animationName = 'closePref';
+    tittle.style.opacity = '0.2';
 
-      //--> Slide Up and Down the Preferences Tab
-      [navigation, tittlePref].forEach((el) => {
-        el.addEventListener('click', function (e) {
-          if (choice.classList.contains('disable')) return;
-          if (choice.classList.contains('closePref')) slideDow();
-          else if (choice.classList.contains('openPref')) slideUp();
-        });
-      });
-    });
+    navTittle.classList.remove('nav--active');
+    navTittle.style.opacity = '0.2';
+
+    arrow.style.transform = 'rotate(0)';
+  }
+
+  GrindSectionEnabled(grindSection, tittle, navTittle) {
+    grindSection.classList.remove('disabled');
+    grindSection.classList.remove('openPref');
+    grindSection.classList.add('closePref');
+
+    tittle.style.opacity = '1';
+    navTittle.style.opacity = '1';
+  }
+
+  handleClickSlide(tittle, handle) {
+    tittle.addEventListener('click', handle);
+  }
+
+  handleClickCard(card, handle) {
+    card.addEventListener('click', handle);
   }
 
   subscriptionPreference() {
     this.cardChoice.forEach((card) => {
       const sub = function () {
         const tittle = card.firstElementChild.textContent;
-        const data = card.getAttribute('data-choice');
+        const data = card.getAttribute('data-card');
         const grindSec = this.grindEl.lastElementChild;
         const arrow = this.grindEl.firstElementChild.children[1];
         let orderPrev = document.querySelectorAll(`.option--${data}`);

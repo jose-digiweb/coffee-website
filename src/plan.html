@@ -37,31 +37,33 @@
   </head>
 
   <body class="body plan__body">
-    <header class="header">
-      <div class="logo">
-        <a href="/">
-          <img src="./assets/coffeeLogo.svg" alt="logo" />
+    <div class="wrapper">
+      <header class="header">
+        <div class="logo">
+          <a href="/">
+            <img src="./assets/coffeeLogo.svg" alt="logo" />
 
-          <span class="logo__text">coffeeroasters</span>
-        </a>
-      </div>
+            <span class="logo__text">coffeeroasters</span>
+          </a>
+        </div>
 
-      <nav class="nav__desktop">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="./about.html">About us</a></li>
-          <li><a href="./plan.html">Create your plan</a></li>
-        </ul>
-      </nav>
+        <nav class="nav__desktop">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./plan.html">Create your plan</a></li>
+          </ul>
+        </nav>
 
-      <div class="mobile__open hidden">
-        <i class="fas fa-bars"></i>
-      </div>
+        <div class="mobile__open hidden">
+          <i class="fas fa-bars"></i>
+        </div>
 
-      <div class="mobile__close hidden">
-        <i class="fas fa-times"></i>
-      </div>
-    </header>
+        <div class="mobile__close hidden">
+          <i class="fas fa-times"></i>
+        </div>
+      </header>
+    </div>
 
     <main class="main main__plan">
       <div class="overlay"></div>
@@ -95,17 +97,19 @@
         </div>
       </div>
 
-      <section class="plan__hero">
-        <div class="plan__hero__copy">
-          <h2>Create a plan</h2>
+      <div class="wrapper">
+        <section class="plan__hero">
+          <div class="plan__hero__copy">
+            <h2>Create a plan</h2>
 
-          <p>
-            Build a subscription plan that best fits your needs. We offer an
-            assortment of the best artisan coffees from around the globe
-            delivered fresh to your door.
-          </p>
-        </div>
-      </section>
+            <p>
+              Build a subscription plan that best fits your needs. We offer an
+              assortment of the best artisan coffees from around the globe
+              delivered fresh to your door.
+            </p>
+          </div>
+        </section>
+      </div>
 
       <section class="process__sec">
         <div class="process__cards">
@@ -175,291 +179,295 @@
         </div>
       </section>
 
-      <section class="plan__section">
-        <div class="Plan__navigation">
-          <ul class="navigation__list">
-            <li class="list__item">
-              <a class="navigation__link nav--1" href="#1">
-                <span>01</span>
-                <span> Preferences </span>
-              </a>
-            </li>
+      <div class="wrapper">
+        <section class="plan__section">
+          <div class="Plan__navigation">
+            <ul class="navigation__list">
+              <li class="list__item">
+                <a class="navigation__link nav--1" href="#1">
+                  <span>01</span>
+                  <span> Preferences </span>
+                </a>
+              </li>
 
-            <li class="list__item">
-              <a class="navigation__link nav--2" href="#2">
-                <span class="list__number">02</span>
-                <span class="list__text"> Bean Type </span>
-              </a>
-            </li>
+              <li class="list__item">
+                <a class="navigation__link nav--2" href="#2">
+                  <span class="list__number">02</span>
+                  <span class="list__text"> Bean Type </span>
+                </a>
+              </li>
 
-            <li class="list__item">
-              <a class="navigation__link nav--3" href="#3">
-                <span class="list__number">03</span>
-                <span class="list__text"> Quantity </span>
-              </a>
-            </li>
+              <li class="list__item">
+                <a class="navigation__link nav--3" href="#3">
+                  <span class="list__number">03</span>
+                  <span class="list__text"> Quantity </span>
+                </a>
+              </li>
 
-            <li class="list__item">
-              <a class="navigation__link nav--4" href="#4">
-                <span class="list__number">04</span>
-                <span class="list__text"> Grind Option </span>
-              </a>
-            </li>
+              <li class="list__item">
+                <a class="navigation__link nav--4" href="#4">
+                  <span class="list__number">04</span>
+                  <span class="list__text"> Grind Option </span>
+                </a>
+              </li>
 
-            <li class="list__item last">
-              <a class="navigation__link nav--5" href="#5">
-                <span class="list__number">05</span>
-                <span class="list__text"> Deliveries </span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="plan__preferences">
-          <div class="coffee__preferences">
-            <div class="preference__choice" id="1">
-              <div class="preference__title" data-tittle="1">
-                <h3>How do you drink your coffee?</h3>
-
-                <span class="arrow">
-                  <i class="fas fa-angle-down"></i>
-                </span>
-              </div>
-
-              <div class="choices closePref" data-choice="1">
-                <div class="cards">
-                  <div class="card__choice capsule" data-card="1">
-                    <h4 class="card__title">Capsule</h4>
-
-                    <p class="card__text">
-                      Compatible with Nespresso systems and similar brewers.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="1">
-                    <h4 class="card__title">Filter</h4>
-
-                    <p class="card__text">
-                      For pour over or drip methods like Aeropress, Chemex, and
-                      V60.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="1">
-                    <h4 class="card__title">Espresso</h4>
-
-                    <p class="card__text">
-                      Dense and finely ground beans for an intense, flavorful
-                      experience.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="preference__choice" id="2">
-              <div class="preference__title" data-tittle="2">
-                <h3>What type of coffee?</h3>
-
-                <span class="arrow">
-                  <i class="fas fa-angle-down"></i>
-                </span>
-              </div>
-
-              <div class="choices closePref" data-choice="2">
-                <div class="cards">
-                  <div class="card__choice" data-card="2">
-                    <h4 class="card__title">Single origin</h4>
-
-                    <p class="card__text">
-                      Distinct, high quality coffee from a specific family-owned
-                      farm.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="2">
-                    <h4 class="card__title">Decaf</h4>
-
-                    <p class="card__text">
-                      Just like regular coffee, except the caffeine has been
-                      removed.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="2">
-                    <h4 class="card__title">Blended</h4>
-
-                    <p class="card__text">
-                      Combination of two or three dark roasted beans of organic
-                      coffees.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="preference__choice" id="3">
-              <div class="preference__title" data-tittle="3">
-                <h3>How much would you like?</h3>
-
-                <span class="arrow">
-                  <i class="fas fa-angle-down"></i>
-                </span>
-              </div>
-
-              <div class="choices closePref" data-choice="3">
-                <div class="cards">
-                  <div class="card__choice" data-card="3">
-                    <h4 class="card__title">250g</h4>
-
-                    <p class="card__text">
-                      Perfect for the solo drinker. Yields about 12 delicious
-                      cups.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="3">
-                    <h4 class="card__title">500g</h4>
-
-                    <p class="card__text">
-                      Perfect option for a couple. Yields about 40 delectable
-                      cups.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="3">
-                    <h4 class="card__title">1000g</h4>
-
-                    <p class="card__text">
-                      Perfect for offices and events. Yields about 90 delightful
-                      cups.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="preference__choice" id="4">
-              <div class="preference__title" data-tittle="4">
-                <h3>Want us to grind them?</h3>
-
-                <span class="arrow">
-                  <i class="fas fa-angle-down"></i>
-                </span>
-              </div>
-
-              <div class="choices closePref" data-choice="4">
-                <div class="cards">
-                  <div class="card__choice" data-card="4">
-                    <h4 class="card__title">Wholebean</h4>
-
-                    <p class="card__text">
-                      Best choice if you cherish the full sensory experience.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="4">
-                    <h4 class="card__title">Filter</h4>
-
-                    <p class="card__text">
-                      For drip or pour-over coffee methods such as V60 or
-                      Aeropress.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="4">
-                    <h4 class="card__title">Cafetiére</h4>
-
-                    <p class="card__text">
-                      Course ground beans specially suited for french press
-                      coffee.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="preference__choice" id="5">
-              <div class="preference__title" data-tittle="5">
-                <h3>How often should we deliver?</h3>
-
-                <span class="arrow">
-                  <i class="fas fa-angle-down"></i>
-                </span>
-              </div>
-
-              <div class="choices closePref" data-choice="5">
-                <div class="cards">
-                  <div class="card__choice" data-card="5">
-                    <h4 class="card__title weekly">Every week</h4>
-
-                    <p class="card__text">
-                      <span class="price__weekly">$</span>
-                      per shipment. Includes free first-class shipping.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="5">
-                    <h4 class="card__title biweekly">Every 2 weeks</h4>
-
-                    <p class="card__text">
-                      <span class="price__biweekly">$</span>
-                      per shipment. Includes free priority shipping.
-                    </p>
-                  </div>
-
-                  <div class="card__choice" data-card="5">
-                    <h4 class="card__title monthly">Every month</h4>
-
-                    <p class="card__text">
-                      <span class="price__monthly">$</span>
-                      per shipment. Includes free priority shipping.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <li class="list__item last">
+                <a class="navigation__link nav--5" href="#5">
+                  <span class="list__number">05</span>
+                  <span class="list__text"> Deliveries </span>
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div class="order__preview">
-            <h4>ORDER SUMMARY</h4>
-            <p class="preview__text">
-              “I drink my coffee using
-              <span class="preview__option preview--1" data-preview="1"
-                >_____</span
-              >, with a
-              <span class="preview__option preview--2" data-preview="2"
-                >_____</span
-              >
-              type of bean.
-              <span class="preview__option preview--3" data-preview="3"
-                >_____</span
-              >
-              <span class="grind--Preview">
-                ground ala
-                <span class="preview__option preview--4" data-preview="4"
+          <div class="plan__preferences">
+            <div class="coffee__preferences">
+              <div class="preference__choice" id="1">
+                <div class="preference__title" data-tittle="1">
+                  <h3>How do you drink your coffee?</h3>
+
+                  <span class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                  </span>
+                </div>
+
+                <div class="choices closePref" data-choice="1">
+                  <div class="cards">
+                    <div class="card__choice capsule" data-card="1">
+                      <h4 class="card__title">Capsule</h4>
+
+                      <p class="card__text">
+                        Compatible with Nespresso systems and similar brewers.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="1">
+                      <h4 class="card__title">Filter</h4>
+
+                      <p class="card__text">
+                        For pour over or drip methods like Aeropress, Chemex,
+                        and V60.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="1">
+                      <h4 class="card__title">Espresso</h4>
+
+                      <p class="card__text">
+                        Dense and finely ground beans for an intense, flavorful
+                        experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="preference__choice" id="2">
+                <div class="preference__title" data-tittle="2">
+                  <h3>What type of coffee?</h3>
+
+                  <span class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                  </span>
+                </div>
+
+                <div class="choices closePref" data-choice="2">
+                  <div class="cards">
+                    <div class="card__choice" data-card="2">
+                      <h4 class="card__title">Single origin</h4>
+
+                      <p class="card__text">
+                        Distinct, high quality coffee from a specific
+                        family-owned farm.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="2">
+                      <h4 class="card__title">Decaf</h4>
+
+                      <p class="card__text">
+                        Just like regular coffee, except the caffeine has been
+                        removed.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="2">
+                      <h4 class="card__title">Blended</h4>
+
+                      <p class="card__text">
+                        Combination of two or three dark roasted beans of
+                        organic coffees.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="preference__choice" id="3">
+                <div class="preference__title" data-tittle="3">
+                  <h3>How much would you like?</h3>
+
+                  <span class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                  </span>
+                </div>
+
+                <div class="choices closePref" data-choice="3">
+                  <div class="cards">
+                    <div class="card__choice" data-card="3">
+                      <h4 class="card__title">250g</h4>
+
+                      <p class="card__text">
+                        Perfect for the solo drinker. Yields about 12 delicious
+                        cups.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="3">
+                      <h4 class="card__title">500g</h4>
+
+                      <p class="card__text">
+                        Perfect option for a couple. Yields about 40 delectable
+                        cups.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="3">
+                      <h4 class="card__title">1000g</h4>
+
+                      <p class="card__text">
+                        Perfect for offices and events. Yields about 90
+                        delightful cups.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="preference__choice" id="4">
+                <div class="preference__title" data-tittle="4">
+                  <h3>Want us to grind them?</h3>
+
+                  <span class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                  </span>
+                </div>
+
+                <div class="choices closePref" data-choice="4">
+                  <div class="cards">
+                    <div class="card__choice" data-card="4">
+                      <h4 class="card__title">Wholebean</h4>
+
+                      <p class="card__text">
+                        Best choice if you cherish the full sensory experience.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="4">
+                      <h4 class="card__title">Filter</h4>
+
+                      <p class="card__text">
+                        For drip or pour-over coffee methods such as V60 or
+                        Aeropress.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="4">
+                      <h4 class="card__title">Cafetiére</h4>
+
+                      <p class="card__text">
+                        Course ground beans specially suited for french press
+                        coffee.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="preference__choice" id="5">
+                <div class="preference__title" data-tittle="5">
+                  <h3>How often should we deliver?</h3>
+
+                  <span class="arrow">
+                    <i class="fas fa-angle-down"></i>
+                  </span>
+                </div>
+
+                <div class="choices closePref" data-choice="5">
+                  <div class="cards">
+                    <div class="card__choice" data-card="5">
+                      <h4 class="card__title weekly">Every week</h4>
+
+                      <p class="card__text">
+                        <span class="price__weekly">$</span>
+                        per shipment. Includes free first-class shipping.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="5">
+                      <h4 class="card__title biweekly">Every 2 weeks</h4>
+
+                      <p class="card__text">
+                        <span class="price__biweekly">$</span>
+                        per shipment. Includes free priority shipping.
+                      </p>
+                    </div>
+
+                    <div class="card__choice" data-card="5">
+                      <h4 class="card__title monthly">Every month</h4>
+
+                      <p class="card__text">
+                        <span class="price__monthly">$</span>
+                        per shipment. Includes free priority shipping.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order__preview">
+              <h4>ORDER SUMMARY</h4>
+              <p class="preview__text">
+                “I drink my coffee as
+                <span class="preview__option preview--1" data-preview="1"
                   >_____</span
-                > </span
-              >, sent to me
-              <span class="preview__option preview--5" data-preview="5"
-                >_____</span
-              >.”
-            </p>
-          </div>
+                >, with a
+                <span class="preview__option preview--2" data-preview="2"
+                  >_____</span
+                >
+                type of bean.
+                <span class="preview__option preview--3" data-preview="3"
+                  >_____</span
+                >
+                <span class="grind--Preview">
+                  ground ala
+                  <span class="preview__option preview--4" data-preview="4"
+                    >_____</span
+                  > </span
+                >, sent to me
+                <span class="preview__option preview--5" data-preview="5"
+                  >_____</span
+                >.”
+              </p>
+            </div>
 
-          <div class="btn__plan__container">
-            <button
-              disabled
-              type="button"
-              class="btn__order btn__disable"
-              id="btn--plan"
-            >
-              Create my plan!
-            </button>
+            <div class="btn__plan__container">
+              <button
+                disabled
+                type="button"
+                class="btn__order btn__disable"
+                id="btn--plan"
+              >
+                Create my plan!
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+    </main>
 
+    <div class="wrapper">
       <footer class="footer">
         <div class="logo__nav">
           <div class="logo">
@@ -491,6 +499,6 @@
           </a>
         </div>
       </footer>
-    </main>
+    </div>
   </body>
 </html>

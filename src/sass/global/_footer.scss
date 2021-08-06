@@ -3,6 +3,7 @@
 
 .footer {
   width: 100%;
+  max-width: 1280px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,6 +22,10 @@
 
   @media screen and(max-width: 1023px) {
     padding: 2.5em 2em;
+  }
+
+  @media screen and(max-width: 1023px) {
+    margin-bottom: 4em;
   }
 
   .logo__nav {

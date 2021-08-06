@@ -269,6 +269,10 @@
       padding: 27px 44px;
     }
 
+    @media screen and(max-width:420px) {
+      padding: 27px 30px;
+    }
+
     h4 {
       font-family: $barlow;
       font-weight: 400;
@@ -299,6 +303,10 @@
 
     @media screen and(max-width:1040px) {
       justify-content: center;
+    }
+
+    @media screen and(max-width:420px) {
+      margin-bottom: 100px;
     }
   }
 }

@@ -32,15 +32,6 @@ img {
 }
 
 body {
-  font-family: $barlow;
-  font-size: $body;
-  font-weight: 400;
-  line-height: 26px;
-  background-color: $lightCream;
-  padding: 0 5em;
-}
-
-.body {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -50,6 +41,47 @@ body {
   font-weight: 400;
   line-height: 26px;
   background-color: $lightCream;
+}
+
+.home__body,
+.about__body {
+  padding: 0 5em;
+
+  @media screen and(max-width: 1200px) {
+    padding: 0 40px;
+  }
+
+  @media screen and(max-width: 700px) {
+    padding: 0 24px;
+  }
+}
+
+// .plan__body {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   font-family: $barlow;
+//   font-size: $body;
+//   font-weight: 400;
+//   line-height: 26px;
+//   background-color: $lightCream;
+//   // padding: 0 5em;
+
+//   // @media screen and(max-width: 1200px) {
+//   //   padding: 0 40px;
+//   // }
+
+//   // @media screen and(max-width: 700px) {
+//   //   padding: 0 24px;
+//   // }
+// }
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 5em;
 
   @media screen and(max-width: 1200px) {

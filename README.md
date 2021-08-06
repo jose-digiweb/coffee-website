@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/html5-sass-javascript-parceljs-mvc-architecture-pub-sub-pattern-E34e2NioN](https://www.frontendmentor.io/solutions/html5-sass-javascript-parceljs-mvc-architecture-pub-sub-pattern-E34e2NioN)
 - Live Site URL: [https://coffee-roast-jose-digiweb.netlify.app/](https://coffee-roast-jose-digiweb.netlify.app/)
 
 ## My process

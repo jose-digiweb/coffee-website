@@ -4,7 +4,7 @@ import 'regenerator-runtime/runtime';
 
 //--> Importing modules
 import mobileMenuView from './views/mobileMenuView.js';
-import PlanSubscription from './views/planView.js';
+import PlanSubscriptionView from './views/planView.js';
 import * as model from './model.js';
 
 const mobileMenuControl = function () {
@@ -25,11 +25,7 @@ const slideChoiceControl = function (e) {
   const arrow = tittleEl.lastElementChild;
   const navTittle = document.querySelector(`.nav--${id}`);
 
-  if (choiceEl.classList.contains('disabled')) return;
-  if (choiceEl.classList.contains('closePref'))
-    PlanSubscription.slideDow(choiceEl, arrow, navTittle);
-  else if (choiceEl.classList.contains('openPref'))
-    PlanSubscription.slideUp(choiceEl, arrow, navTittle);
+  PlanSubscriptionView.slideSectionControl(choiceEl, arrow, navTittle);
 };
 
 const subscriptionChoiceControl = function (e) {
@@ -39,73 +35,84 @@ const subscriptionChoiceControl = function (e) {
 
   //--> Grind Section Elements
   const grindSectionTittle = model.state.slideTittle[3];
-  const grindSection = model.state.slideTittle[3].nextElementSibling;
+  const grindSection = grindSectionTittle.nextElementSibling;
+  const arrow = grindSectionTittle.lastElementChild;
   const grindId = grindSection.getAttribute('data-choice');
   const navTittle = document.querySelector(`.nav--${grindId}`);
-  const arrow = model.state.slideTittle[3].lastElementChild;
-
-  //--> Order Preview Update Element
-  const previewChoice = document.querySelector(`.preview--${choiceId}`);
 
   //--> Creating the choices array inside the State Object
   model.state.choices = [];
 
+  //--> Updating the Active State of the Subscription Choices
   model.state.cards.forEach((card) => {
-    if (card.getAttribute('data-card') === choiceId) {
-      //--> Removing the Active State to the previous Choice
-      card.classList.remove('active--Card');
-
-      //--> Adding the Active State to the Current Choice
-      subscriptionChoice.classList.add('active--Card');
-
-      //--> Updating the Order Preview Text
-      previewChoice.innerText =
-        subscriptionChoice.firstElementChild.textContent;
-    }
-
-    //--> Saving the Subscription Choices to State
-    if (card.classList.contains('active--Card')) model.state.choices.push(card);
+    PlanSubscriptionView.updateActiveChoice(
+      card,
+      choiceId,
+      subscriptionChoice,
+      model.state.choices
+    );
   });
+
+  //--> Updating the Order Preview Text
+  model.state.previewText.optionsText.map((option) => {
+    PlanSubscriptionView.updateOrderPreview(
+      option,
+      choiceId,
+      subscriptionChoice
+    );
+  });
+
+  //--> Updating the Prices depending on Quantity Chose
+  PlanSubscriptionView.changePrice(subscriptionChoice.firstElementChild);
 
   //--> Grind Section Control Enable/Disable
   model.state.cards.map((card) => {
-    if (
-      card.textContent.includes('Capsule') &&
-      card.classList.contains('active--Card')
-    )
-      PlanSubscription.GrindSectionDisabled(
-        grindSection,
-        grindSectionTittle,
-        navTittle,
-        arrow
-      );
-    else if (
-      card.textContent.includes('Capsule') &&
-      !card.classList.contains('active--Card')
-    )
-      PlanSubscription.GrindSectionEnabled(
-        grindSection,
-        grindSectionTittle,
-        navTittle
-      );
+    PlanSubscriptionView.GrindSectionControl(
+      card,
+      model.state.previewText.optionsText[2],
+      grindSection,
+      grindSectionTittle,
+      navTittle,
+      arrow
+    );
   });
 
-  //--> Activating the Create Plan Button
-  if (model.state.choices.length === 5) {
-    PlanSubscription.btnOrder.classList.remove('btn__disable');
-    PlanSubscription.btnOrder.disabled = false;
-  }
+  //--> Activating the 'Create Plan' Button
+  PlanSubscriptionView.activatePlanBtn(model.state.previewText.previewEl);
+};
+
+const btnPlanControl = function () {
+  const previewMarkup = model.state.previewText.previewEl.innerHTML;
+
+  //--> Rendering the Preview Text to the Modal
+  PlanSubscriptionView.render(
+    PlanSubscriptionView.modalText.firstElementChild,
+    'afterbegin',
+    previewMarkup
+  );
+
+  //--> Calculating the Checkout Price
+  model.state.choices.map((choice) => {
+    PlanSubscriptionView.calculateCheckoutPrice(choice);
+  });
+
+  //--> Opening the Modal
+  PlanSubscriptionView.openModal();
 };
 
 const init = function () {
   mobileMenuControl();
 
   model.state.slideTittle.map((tittle) => {
-    PlanSubscription.handleClickSlide(tittle, slideChoiceControl);
+    PlanSubscriptionView.handleClickSlide(tittle, slideChoiceControl);
   });
 
   model.state.cards.map((card) =>
-    PlanSubscription.handleClickCard(card, subscriptionChoiceControl)
+    PlanSubscriptionView.handleClickCard(card, subscriptionChoiceControl)
   );
+
+  PlanSubscriptionView.handleClickPlanBtn(btnPlanControl);
+
+  PlanSubscriptionView.handleClickOverlay();
 };
 init();

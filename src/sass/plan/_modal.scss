@@ -73,7 +73,7 @@
         line-height: 30px;
       }
 
-      .options {
+      .preview__option {
         color: $darkCyan;
       }
     }
@@ -96,8 +96,8 @@
     line-height: 36px;
   }
 
-  .btn--mobile {
-    display: none;
+  .modal__PriceBtn {
+    margin-left: 5px;
   }
 }
 

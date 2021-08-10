@@ -184,7 +184,7 @@
           <div class="Plan__navigation">
             <ul class="navigation__list">
               <li class="list__item">
-                <a class="navigation__link nav--1" href="#1">
+                <a class="navigation__link nav--1 nav--active" href="#1">
                   <span>01</span>
                   <span> Preferences </span>
                 </a>
@@ -226,12 +226,16 @@
                 <div class="preference__title" data-tittle="1">
                   <h3>How do you drink your coffee?</h3>
 
-                  <span class="arrow">
+                  <span class="arrow" style="transform: rotate(180deg)">
                     <i class="fas fa-angle-down"></i>
                   </span>
                 </div>
 
-                <div class="choices closePref" data-choice="1">
+                <div
+                  class="choices openPref"
+                  style="animation-name: openPref"
+                  data-choice="1"
+                >
                   <div class="cards">
                     <div class="card__choice capsule" data-card="1">
                       <h4 class="card__title">Capsule</h4>

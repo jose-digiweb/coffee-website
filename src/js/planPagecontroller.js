@@ -1,7 +1,3 @@
-//--> Transcribe and Polyfill
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
 //--> Importing modules
 import mobileMenuView from './views/mobileMenuView.js';
 import PlanSubscriptionView from './views/planView.js';
@@ -44,7 +40,7 @@ const subscriptionChoiceControl = function (e) {
   model.state.choices = [];
 
   //--> Updating the Active State of the Subscription Choices
-  model.state.cards.forEach((card) => {
+  model.state.cards.forEach(card => {
     PlanSubscriptionView.updateActiveChoice(
       card,
       choiceId,
@@ -54,7 +50,7 @@ const subscriptionChoiceControl = function (e) {
   });
 
   //--> Updating the Order Preview Text
-  model.state.previewText.optionsText.map((option) => {
+  model.state.previewText.optionsText.map(option => {
     PlanSubscriptionView.updateOrderPreview(
       option,
       choiceId,
@@ -66,7 +62,7 @@ const subscriptionChoiceControl = function (e) {
   PlanSubscriptionView.changePrice(subscriptionChoice.firstElementChild);
 
   //--> Grind Section Control Enable/Disable
-  model.state.cards.map((card) => {
+  model.state.cards.map(card => {
     PlanSubscriptionView.GrindSectionControl(
       card,
       model.state.previewText.optionsText[2],
@@ -92,7 +88,7 @@ const btnPlanControl = function () {
   );
 
   //--> Calculating the Checkout Price
-  model.state.choices.map((choice) => {
+  model.state.choices.map(choice => {
     PlanSubscriptionView.calculateCheckoutPrice(choice);
   });
 
@@ -103,11 +99,11 @@ const btnPlanControl = function () {
 const init = function () {
   mobileMenuControl();
 
-  model.state.slideTittle.map((tittle) => {
+  model.state.slideTittle.map(tittle => {
     PlanSubscriptionView.handleClickSlide(tittle, slideChoiceControl);
   });
 
-  model.state.cards.map((card) =>
+  model.state.cards.map(card =>
     PlanSubscriptionView.handleClickCard(card, subscriptionChoiceControl)
   );
 

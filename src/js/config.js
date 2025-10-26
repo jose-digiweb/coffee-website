@@ -1,7 +1,3 @@
-//--> Transcribe and Polyfill
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
 export const BREAK_POINT = 700;
 
 //--> Subscription Price per Quantity

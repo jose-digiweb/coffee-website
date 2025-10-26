@@ -1,7 +1,3 @@
-//--> Transcribe and Polyfill
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
 import * as config from '../config.js';
 
 class PlanSubscriptionView {

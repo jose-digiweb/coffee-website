@@ -1,7 +1,3 @@
-//--> Transcribe and Polyfill
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
 //--> Configuration and Helper files
 import { menuState } from '../helper.js';
 
@@ -34,7 +30,7 @@ class MobileMenuView {
   }
 
   mobileMenuBtn() {
-    ['load', 'resize'].forEach((ev) => {
+    ['load', 'resize'].forEach(ev => {
       window.addEventListener(ev, this._controlMobileMenu.bind(this));
     });
   }

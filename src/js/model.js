@@ -1,7 +1,3 @@
-//--> Transcribe and Polyfill
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-
 export const state = {
   cards: [],
   slideTittle: [],
@@ -14,7 +10,7 @@ export const state = {
 export const getCardsChoice = function (data) {
   const cardsChoice = document.querySelectorAll('.card__choice');
 
-  Array.from(cardsChoice).map((card) => {
+  Array.from(cardsChoice).map(card => {
     state.cards.push(card);
   });
 };
@@ -22,7 +18,7 @@ export const getCardsChoice = function (data) {
 export const getChoiceTittle = function (data) {
   const choiceTittle = document.querySelectorAll('.preference__title');
 
-  Array.from(choiceTittle).map((tittle) => {
+  Array.from(choiceTittle).map(tittle => {
     state.slideTittle.push(tittle);
   });
 };
@@ -31,7 +27,7 @@ export const getOrderPreview = function (data) {
   const previewText = document.querySelector('.preview__text');
   const optionText = document.querySelectorAll('.preview__option');
 
-  Array.from(optionText).map((option) =>
+  Array.from(optionText).map(option =>
     state.previewText.optionsText.push(option)
   );
 

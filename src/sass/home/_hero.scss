@@ -11,14 +11,14 @@
   border-radius: 8px;
   padding-left: 85px;
   margin-bottom: 190px;
-  background-image: url(../assets/home/desktop/image-hero-coffeepress.jpg);
+  background-image: url(../../assets/home/desktop/image-hero-coffeepress.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
 
   @media screen and (max-width: 1024px) {
     height: 500px;
-    background-image: url(../assets/home/tablet/image-hero-coffeepress.jpg);
+    background-image: url(../../assets/home/tablet/image-hero-coffeepress.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -29,7 +29,7 @@
     align-items: center;
     padding: 0;
     margin-bottom: 130px;
-    background-image: url('../assets/home/mobile/image-hero-coffeepress.jpg');
+    background-image: url(../../assets/home/mobile/image-hero-coffeepress.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;

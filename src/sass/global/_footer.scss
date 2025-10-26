@@ -11,20 +11,20 @@
   padding: 2.9375em 5.3125em; //47px 85px
   margin-bottom: 5.5em; //88px
 
-  @media screen and(max-width: 1023px) {
+  @media screen and (max-width: 1023px) {
     flex-direction: column;
     padding: 3.4em 11.9em 3.4em 13.5em; //54px 190px 54px 215px
   }
 
-  @media screen and(max-width: 1270px) and (min-width: 1024px) {
+  @media screen and (max-width: 1270px) and (min-width: 1024px) {
     padding: 2.9375em 2.5em;
   }
 
-  @media screen and(max-width: 1023px) {
+  @media screen and (max-width: 1023px) {
     padding: 2.5em 2em;
   }
 
-  @media screen and(max-width: 1023px) {
+  @media screen and (max-width: 1023px) {
     margin-bottom: 4em;
   }
 
@@ -32,14 +32,14 @@
     display: flex;
     align-items: center;
 
-    @media screen and(max-width: 1023px) {
+    @media screen and (max-width: 1023px) {
       flex-direction: column;
     }
 
     .logo {
       margin-right: 4.08em;
 
-      @media screen and(max-width: 1023px) {
+      @media screen and (max-width: 1023px) {
         margin: 0 0 2em 0;
       }
     }
@@ -47,7 +47,7 @@
     .nav__footer {
       display: flex;
 
-      @media screen and(max-width: 390px) {
+      @media screen and (max-width: 390px) {
         flex-direction: column;
         align-items: center;
       }
@@ -69,7 +69,7 @@
           color: $lightCream;
         }
 
-        @media screen and(max-width: 390px) {
+        @media screen and (max-width: 390px) {
           &:not(:last-child) {
             margin-right: 0;
             margin-bottom: 2em; //24px
@@ -80,7 +80,7 @@
   }
 
   .social_icons {
-    @media screen and(max-width: 1023px) {
+    @media screen and (max-width: 1023px) {
       margin-top: 4.1em; //65px
     }
 

@@ -8,7 +8,7 @@
   align-items: center;
   margin-bottom: 144px;
 
-  @media screen and(max-width: 700px) {
+  @media screen and (max-width: 700px) {
     margin-bottom: 120px;
   }
 
@@ -18,7 +18,7 @@
     flex-direction: column;
     margin-left: calc(165px - 80px);
 
-    @media screen and(max-width: 1200px) {
+    @media screen and (max-width: 1200px) {
       margin-left: 0;
     }
   }
@@ -26,7 +26,7 @@
   .head__tittle {
     width: 100%;
 
-    @media screen and(max-width: 700px) {
+    @media screen and (max-width: 700px) {
       text-align: center;
     }
 
@@ -42,7 +42,7 @@
     width: 100%;
     display: flex;
 
-    @media screen and(max-width: 700px) {
+    @media screen and (max-width: 700px) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -55,13 +55,13 @@
       flex-direction: column;
       margin-right: 95px;
 
-      @media screen and(max-width: 1200px) {
+      @media screen and (max-width: 1200px) {
         width: 223px;
         max-width: 223px;
         margin-right: 10px;
       }
 
-      @media screen and(max-width: 700px) {
+      @media screen and (max-width: 700px) {
         width: 100%;
         max-width: unset;
         align-items: center;
@@ -81,7 +81,7 @@
       }
 
       .head__copy {
-        @media screen and(max-width: 700px) {
+        @media screen and (max-width: 700px) {
           text-align: center;
         }
 
@@ -90,12 +90,12 @@
           line-height: 36px;
           margin-bottom: 24px;
 
-          @media screen and(max-width: 1200px) {
+          @media screen and (max-width: 1200px) {
             font-size: 24px;
             margin-bottom: 22px;
           }
 
-          @media screen and(max-width: 700px) {
+          @media screen and (max-width: 700px) {
             font-size: 28px;
           }
         }

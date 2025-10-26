@@ -10,11 +10,11 @@
   max-width: 1110px;
   margin-bottom: 256px; //168px + 88px from the quality image(-88px)
 
-  @media screen and(max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     margin-bottom: 0; // Resetting the margin from the quality section
   }
 
-  @media screen and(max-width: 700px) {
+  @media screen and (max-width: 700px) {
     margin-bottom: 198px; // 78px Resetting the margin from the quality section (the value came from quality image negative margin) + 120px of white space.
     flex-direction: column;
     max-width: none;
@@ -31,7 +31,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    @media screen and(max-width: 935px) {
+    @media screen and (max-width: 935px) {
       width: 281px;
       max-width: 281px;
       height: 470px;
@@ -39,7 +39,7 @@
       background-image: url(../assets/about/tablet/image-commitment.jpg);
     }
 
-    @media screen and(max-width: 700px) {
+    @media screen and (max-width: 700px) {
       width: 327px;
       max-width: 327px;
       height: 400px;
@@ -53,12 +53,12 @@
     max-width: 539px;
     margin-left: 125px;
 
-    @media screen and(max-width: 1200px) {
+    @media screen and (max-width: 1200px) {
       margin-left: 70px;
       max-width: 340px;
     }
 
-    @media screen and(max-width: 700px) {
+    @media screen and (max-width: 700px) {
       max-width: none;
       margin: 0;
       text-align: center;
@@ -69,7 +69,7 @@
       line-height: 48px;
       margin-bottom: 32px;
 
-      @media screen and(max-width: 1200px) {
+      @media screen and (max-width: 1200px) {
         font-size: 32px;
         line-height: 48px;
         margin-bottom: 30px;
@@ -79,7 +79,7 @@
     p {
       opacity: 0.8;
 
-      @media screen and(max-width: 1200px) {
+      @media screen and (max-width: 1200px) {
         font-size: 15px;
         line-height: 25px;
       }

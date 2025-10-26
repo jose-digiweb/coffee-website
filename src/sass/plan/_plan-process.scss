@@ -9,11 +9,11 @@
   padding: 100px 50px 100px 85px;
   border-radius: 10px;
 
-  @media screen and(max-width: 860px) {
+  @media screen and (max-width: 860px) {
     padding: 50px;
   }
 
-  @media screen and(max-width: 500px) {
+  @media screen and (max-width: 500px) {
     margin-bottom: 120px;
   }
 
@@ -21,7 +21,7 @@
     width: auto;
     display: flex;
 
-    @media screen and(max-width: 860px) {
+    @media screen and (max-width: 860px) {
       flex-direction: column;
       margin-bottom: 5em;
     }
@@ -35,7 +35,7 @@
         margin-right: 5.9375em;
       }
 
-      @media screen and(max-width: 1023px) {
+      @media screen and (max-width: 1023px) {
         max-width: 223px;
 
         &:not(:last-child) {
@@ -43,7 +43,7 @@
         }
       }
 
-      @media screen and(max-width: 860px) {
+      @media screen and (max-width: 860px) {
         text-align: center;
         max-width: none;
         min-width: none;
@@ -59,7 +59,7 @@
         align-items: center;
         margin-bottom: 4.2em; //67px
 
-        @media screen and(max-width: 860px) {
+        @media screen and (max-width: 860px) {
           display: none;
         }
 
@@ -77,15 +77,15 @@
             left: 31px;
             top: 13.5px;
 
-            @media screen and(max-width: 1270px) {
+            @media screen and (max-width: 1270px) {
               width: 350px;
             }
 
-            @media screen and(max-width: 1085px) {
+            @media screen and (max-width: 1085px) {
               width: 319px;
             }
 
-            @media screen and(max-width: 1023px) {
+            @media screen and (max-width: 1023px) {
               width: 230px;
             }
           }
@@ -114,7 +114,7 @@
           margin-bottom: 1.3125em;
           padding-right: 1em;
 
-          @media screen and(max-width: 860px) {
+          @media screen and (max-width: 860px) {
             margin-bottom: 0.9em; //24px
             font-size: 1.75rem; //28px
             line-height: 32px;
@@ -123,7 +123,7 @@
 
         p {
           color: $lightCream;
-          @media screen and(max-width: 1023px) {
+          @media screen and (max-width: 1023px) {
             padding-right: 0;
           }
         }

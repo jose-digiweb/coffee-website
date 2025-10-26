@@ -47,11 +47,11 @@ body {
 .about__body {
   padding: 0 5em;
 
-  @media screen and(max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     padding: 0 40px;
   }
 
-  @media screen and(max-width: 700px) {
+  @media screen and (max-width: 700px) {
     padding: 0 24px;
   }
 }
@@ -68,11 +68,11 @@ body {
 //   background-color: $lightCream;
 //   // padding: 0 5em;
 
-//   // @media screen and(max-width: 1200px) {
+//   // @media screen and (max-width: 1200px) {
 //   //   padding: 0 40px;
 //   // }
 
-//   // @media screen and(max-width: 700px) {
+//   // @media screen and (max-width: 700px) {
 //   //   padding: 0 24px;
 //   // }
 // }
@@ -84,11 +84,11 @@ body {
   align-items: center;
   padding: 0 5em;
 
-  @media screen and(max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     padding: 0 40px;
   }
 
-  @media screen and(max-width: 700px) {
+  @media screen and (max-width: 700px) {
     padding: 0 24px;
   }
 }
@@ -202,7 +202,7 @@ button {
   }
 
   img {
-    @media screen and(max-width: 390px) {
+    @media screen and (max-width: 390px) {
       width: 16px;
     }
   }
@@ -212,7 +212,7 @@ button {
     font-family: $fraunces;
     margin-left: 0.2em;
 
-    @media screen and(max-width: 390px) {
+    @media screen and (max-width: 390px) {
       font-size: 1.2rem;
     }
   }
@@ -232,7 +232,7 @@ button {
   border-radius: 5px;
   margin-top: 20px;
 
-  @media screen and(max-width: 650px) {
+  @media screen and (max-width: 650px) {
     width: 100%;
     font-size: 1rem;
   }
@@ -243,7 +243,7 @@ button {
     font-size: 1.5rem;
     color: $darkCyan;
 
-    @media screen and(max-width: 450px) {
+    @media screen and (max-width: 450px) {
       font-size: 1rem;
     }
   }

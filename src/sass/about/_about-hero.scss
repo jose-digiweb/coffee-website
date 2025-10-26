@@ -16,7 +16,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  @media screen and(max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     height: 400px;
     max-height: 400px;
     background-image: url(../assets/about/tablet/image-hero-whitecup.jpg);
@@ -25,7 +25,7 @@
     background-repeat: no-repeat;
   }
 
-  @media screen and(max-width: 700px) {
+  @media screen and (max-width: 700px) {
     height: unset;
     max-height: unset;
     align-items: flex-start;
@@ -47,11 +47,11 @@
     }
   }
 
-  @media screen and(max-width: 935px) {
+  @media screen and (max-width: 935px) {
     margin-bottom: 144px;
   }
 
-  @media screen and(max-width: 700px) {
+  @media screen and (max-width: 700px) {
     margin-bottom: 120px;
   }
 
@@ -61,13 +61,13 @@
     margin-left: 84px;
     z-index: 2;
 
-    @media screen and(max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       width: 398px;
       max-width: 398px;
       margin-left: 58px;
     }
 
-    @media screen and(max-width: 700px) {
+    @media screen and (max-width: 700px) {
       width: 398px;
       max-width: 398px;
       margin-top: 111px;
@@ -82,12 +82,12 @@
       color: $lightCream;
       margin-bottom: 24px;
 
-      @media screen and(max-width: 1024px) {
+      @media screen and (max-width: 1024px) {
         font-size: 32px;
         line-height: 40px;
       }
 
-      @media screen and(max-width: 700px) {
+      @media screen and (max-width: 700px) {
         font-size: 28px;
         line-height: 28px;
       }
@@ -96,13 +96,13 @@
     p {
       color: $lightCream;
 
-      @media screen and(max-width: 1024px) {
+      @media screen and (max-width: 1024px) {
         font-size: 15px;
         line-height: 25px;
         opacity: 0.8;
       }
 
-      @media screen and(max-width: 700px) {
+      @media screen and (max-width: 700px) {
         font-size: 15 px;
         line-height: 30px;
       }

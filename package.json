@@ -16,6 +16,9 @@
   "devDependencies": {
     "sass": "^1.80.0"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.52.5"
+  },
   "engines": {
     "node": ">=20.19.0"
   }
